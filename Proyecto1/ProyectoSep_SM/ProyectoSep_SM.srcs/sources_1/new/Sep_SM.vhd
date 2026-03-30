@@ -27,7 +27,7 @@ begin
         
         if rising_edge(clk) then
             
-            if (state = 0) then
+            if (state = 0) then -- IDLE
                 leds <= "1111";
                 
                 if (start = '1') then

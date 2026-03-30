@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1774127091">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1774265990">
   <File Type="PA-TCL" Name="Sep_SM.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Sep_SM_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Sep_SM_reports.tcl"/>
@@ -17,6 +17,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Memory.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Sep_SM"/>
@@ -25,8 +32,10 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../Zybo-Z7-Master.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/SEP/Zybo-Z7-Master.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Zybo-Z7-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1774265930"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

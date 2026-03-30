@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sat Mar 21 18:06:34 2026
-| Host         : Mazzi running 64-bit major release  (build 9200)
+| Date         : Mon Mar 23 08:41:27 2026
+| Host         : MS061325 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Sep_SM_timing_summary_routed.rpt -pb Sep_SM_timing_summary_routed.pb -rpx Sep_SM_timing_summary_routed.rpx -warn_on_violation
 | Design       : Sep_SM
 | Device       : 7z010-clg400

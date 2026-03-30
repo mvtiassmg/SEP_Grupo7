@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Mar 22 19:54:35 2026
+# Process ID: 30820
+# Current directory: D:/SEP/SEP_Grupo7/Proyecto1/ProyectoSep_SM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent48364 D:\SEP\SEP_Grupo7\Proyecto1\ProyectoSep_SM\ProyectoSep_SM.xpr
+# Log file: D:/SEP/SEP_Grupo7/Proyecto1/ProyectoSep_SM/vivado.log
+# Journal file: D:/SEP/SEP_Grupo7/Proyecto1/ProyectoSep_SM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/SEP/SEP_Grupo7/Proyecto1/ProyectoSep_SM/ProyectoSep_SM.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/mazzi/OneDrive/Escritorio/vivado2/ProyectoSep_SM' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'D:/SEP/SEP_Grupo7/Proyecto1/Zybo-Z7-Master.xdc', nor could it be found using path 'C:/Users/mazzi/OneDrive/Escritorio/vivado2/Zybo-Z7-Master.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 1064.230 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 23 08:20:42 2026...
+cs/sources_1/new/Memory.vhd w ]
+add_files D:/SEP/SEP_Grupo7/Proyecto1/ProyectoSep_SM/ProyectoSep_SM.srcs/sources_1/new/Memory.vhd
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 23 08:20:29 2026...

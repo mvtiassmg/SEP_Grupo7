@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Mar 29 12:09:37 2026
+# Process ID: 15708
+# Current directory: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1
+# Command line: vivado.exe -log ClockDivider.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ClockDivider.tcl -notrace
+# Log file: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/ClockDivider.vdi
+# Journal file: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ClockDivider.tcl -notrace
