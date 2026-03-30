@@ -1,51 +1,51 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.05845",
-   "Default View_TopLeft":"-97,-174",
+   "Default View_ScaleFactor":"1.06596",
+   "Default View_TopLeft":"-99,-197",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port btnRNG -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port start -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
-preplace port nxt -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
-preplace port reset -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
-preplace port clk -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
-preplace port rgb_r -pg 1 -lvl 6 -x 1220 -y 340 -defaultsOSRD
-preplace port rgb_g -pg 1 -lvl 6 -x 1220 -y 370 -defaultsOSRD
-preplace port rbg_b -pg 1 -lvl 6 -x 1220 -y 400 -defaultsOSRD
-preplace portBus leds -pg 1 -lvl 6 -x 1220 -y 310 -defaultsOSRD
-preplace inst Debouncer_0 -pg 1 -lvl 4 -x 810 -y 480 -defaultsOSRD
-preplace inst RNGCore_0 -pg 1 -lvl 3 -x 550 -y 200 -defaultsOSRD
-preplace inst RNGComparator_0 -pg 1 -lvl 4 -x 810 -y 190 -defaultsOSRD
-preplace inst RNGTambor_0 -pg 1 -lvl 3 -x 550 -y 410 -defaultsOSRD
-preplace inst Sep_SM_0 -pg 1 -lvl 5 -x 1080 -y 370 -defaultsOSRD
-preplace inst ClockDivider_0 -pg 1 -lvl 1 -x 110 -y 210 -defaultsOSRD
-preplace inst Debouncer_1 -pg 1 -lvl 2 -x 310 -y 70 -defaultsOSRD
-preplace inst Debouncer_2 -pg 1 -lvl 4 -x 810 -y 600 -defaultsOSRD
-preplace inst Debouncer_3 -pg 1 -lvl 2 -x 310 -y 190 -defaultsOSRD
-preplace inst ClockDivider_1 -pg 1 -lvl 2 -x 310 -y 300 -defaultsOSRD
-preplace netloc clk_1 1 0 2 20 300 NJ
-preplace netloc ClockDivider_0_clk_out 1 1 3 200 500 NJ 500 680
-preplace netloc start_1 1 0 4 NJ 490 NJ 490 NJ 490 NJ
-preplace netloc btnRNG_1 1 0 2 NJ 80 NJ
-preplace netloc nxt_1 1 0 4 NJ 610 NJ 610 NJ 610 NJ
-preplace netloc reset_1 1 0 3 NJ 270 210 410 NJ
-preplace netloc Debouncer_2_btn_out 1 4 1 970 370n
-preplace netloc Debouncer_0_btn_out 1 4 1 950 350n
-preplace netloc ClockDivider_1_clk_out 1 2 3 420 330 NJ 330 N
-preplace netloc Debouncer_3_btn_out 1 2 1 N 190
-preplace netloc RNGComparator_0_shoot 1 4 1 960 180n
-preplace netloc RNGComparator_0_seguro 1 4 1 940 200n
-preplace netloc RNGCore_0_pos_bala 1 3 1 N 190
-preplace netloc RNGTambor_0_pos 1 3 1 670 170n
-preplace netloc Debouncer_1_btn_out 1 2 1 410 70n
-preplace netloc Sep_SM_0_game_en 1 2 4 430 110 680 270 NJ 270 1190
-preplace netloc Sep_SM_0_leds 1 5 1 1200J 310n
-preplace netloc Sep_SM_0_rgb_r 1 5 1 1200J 340n
-preplace netloc Sep_SM_0_rgb_g 1 5 1 NJ 370
-preplace netloc Sep_SM_0_rgb_b 1 5 1 1200J 390n
-levelinfo -pg 1 0 110 310 550 810 1080 1220
-pagesize -pg 1 -db -bbox -sgen -100 0 1330 670
+preplace port clk -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port btnRNG -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port start -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace port nxt -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port rgb_r -pg 1 -lvl 6 -x 1210 -y 400 -defaultsOSRD
+preplace port rgb_g -pg 1 -lvl 6 -x 1210 -y 430 -defaultsOSRD
+preplace port rgb_b -pg 1 -lvl 6 -x 1210 -y 460 -defaultsOSRD
+preplace portBus leds -pg 1 -lvl 6 -x 1210 -y 370 -defaultsOSRD
+preplace inst Debouncer_0 -pg 1 -lvl 4 -x 800 -y 410 -defaultsOSRD
+preplace inst RNGCore_0 -pg 1 -lvl 3 -x 540 -y 100 -defaultsOSRD
+preplace inst RNGComparator_0 -pg 1 -lvl 4 -x 800 -y 90 -defaultsOSRD
+preplace inst RNGTambor_0 -pg 1 -lvl 3 -x 540 -y 250 -defaultsOSRD
+preplace inst ClockDivider_0 -pg 1 -lvl 1 -x 110 -y 200 -defaultsOSRD
+preplace inst Debouncer_1 -pg 1 -lvl 2 -x 300 -y 130 -defaultsOSRD
+preplace inst Debouncer_2 -pg 1 -lvl 4 -x 800 -y 550 -defaultsOSRD
+preplace inst Debouncer_3 -pg 1 -lvl 2 -x 300 -y 250 -defaultsOSRD
+preplace inst ClockDivider_1 -pg 1 -lvl 2 -x 300 -y 360 -defaultsOSRD
+preplace inst Sep_SM_0 -pg 1 -lvl 5 -x 1070 -y 430 -defaultsOSRD
+preplace netloc clk_1 1 0 2 20 360 NJ
+preplace netloc ClockDivider_0_clk_out 1 1 3 200 490 NJ 490 670
+preplace netloc start_1 1 0 4 NJ 420 NJ 420 NJ 420 NJ
+preplace netloc nxt_1 1 0 4 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc btnRNG_1 1 0 2 NJ 140 NJ
+preplace netloc reset_1 1 0 2 NJ 260 NJ
+preplace netloc Debouncer_2_btn_out 1 4 1 960 430n
+preplace netloc ClockDivider_1_clk_out 1 2 3 400 480 NJ 480 940J
+preplace netloc Debouncer_0_btn_out 1 4 1 N 410
+preplace netloc Debouncer_1_btn_out 1 2 1 N 130
+preplace netloc Debouncer_3_btn_out 1 2 1 410 90n
+preplace netloc RNGComparator_0_shoot 1 4 1 950 80n
+preplace netloc RNGComparator_0_seguro 1 4 1 930 100n
+preplace netloc Sep_SM_0_game_en 1 2 4 420 10 670 170 NJ 170 1180
+preplace netloc RNGCore_0_pos_bala 1 3 1 N 90
+preplace netloc RNGTambor_0_pos 1 3 1 660 70n
+preplace netloc Sep_SM_0_leds 1 5 1 1190J 370n
+preplace netloc Sep_SM_0_rgb_r 1 5 1 1190J 400n
+preplace netloc Sep_SM_0_rgb_g 1 5 1 NJ 430
+preplace netloc Sep_SM_0_rgb_b 1 5 1 1190J 450n
+levelinfo -pg 1 0 110 300 540 800 1070 1210
+pagesize -pg 1 -db -bbox -sgen -100 0 1320 620
 "
 }
 {

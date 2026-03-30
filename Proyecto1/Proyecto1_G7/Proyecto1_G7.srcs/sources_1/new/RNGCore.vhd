@@ -7,10 +7,10 @@ entity RNGCore is
     );
     port(
         clk      : in  std_logic;  -- Reloj del sistema
-        reset    : in  std_logic;  -- Reset general - nueva partida
+        reset    : in  std_logic;  -- Reset general 
         enable   : in  std_logic;  -- Habilita la generación de la bala
         btnRNG   : in  std_logic;  -- Botón para fijar la posición de la bala
-        pos_bala : out std_logic_vector(2 downto 0);  -- Posición en binario ? RNGComparator
+        pos_bala : out std_logic_vector(3 downto 0);  -- Posición en binario
         ending   : out std_logic   -- '1' cuando la bala ya fue generada y almacenada
     );
 end RNGCore;
@@ -40,13 +40,13 @@ architecture Behavioral of RNGCore is
     component Decoder
         port(
             magnum   : in  std_logic_vector(7 downto 0);
-            pos_bala : out std_logic_vector(2 downto 0)
+            pos_bala : out std_logic_vector(3 downto 0)
         );
     end component;
 
-    signal magnum_raw  : std_logic_vector(7 downto 0);  -- RNGBala ? BalaMemory
-    signal magnum_mem  : std_logic_vector(7 downto 0);  -- BalaMemory ? Decoder
-    signal ending_int  : std_logic;                     -- RNGBala ? BalaMemory (load) y salida
+    signal magnum_raw  : std_logic_vector(7 downto 0); 
+    signal magnum_mem  : std_logic_vector(7 downto 0);  
+    signal ending_int  : std_logic;                     
 
 begin
 

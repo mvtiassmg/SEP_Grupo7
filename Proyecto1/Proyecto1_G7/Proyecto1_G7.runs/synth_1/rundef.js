@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ClockDivider.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ClockDivider.tcl" );
+         "-log RNGCore_imp_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RNGCore_imp_wrapper.tcl" );
 
 
 

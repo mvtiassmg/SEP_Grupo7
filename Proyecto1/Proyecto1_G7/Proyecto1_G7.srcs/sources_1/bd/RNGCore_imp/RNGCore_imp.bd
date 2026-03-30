@@ -1,0 +1,277 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5F4715C6E56A66E2",
+      "device": "xc7z010clg400-1",
+      "name": "RNGCore_imp",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Debouncer_0": "",
+      "Debouncer_1": "",
+      "ClockDivider_0": "",
+      "RNGCore_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "RNGCore_imp_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "btnRNG": {
+        "direction": "I"
+      },
+      "enable": {
+        "direction": "I"
+      },
+      "rgb_b": {
+        "direction": "O"
+      },
+      "leds": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "RNGCore_imp_Debouncer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "RNGCore_imp_Debouncer_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
+          }
+        }
+      },
+      "ClockDivider_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider:1.0",
+        "xci_name": "RNGCore_imp_ClockDivider_0_0",
+        "parameters": {
+          "FREQ_DES": {
+            "value": "100"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "FREQ_HZ": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "PHASE": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
+          }
+        }
+      },
+      "RNGCore_0": {
+        "vlnv": "xilinx.com:module_ref:RNGCore:1.0",
+        "xci_name": "RNGCore_imp_RNGCore_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RNGCore",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "btnRNG": {
+            "direction": "I"
+          },
+          "pos_bala": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "ending": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Debouncer_0/clk",
+          "Debouncer_1/clk",
+          "ClockDivider_0/clk"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "Debouncer_1/btn"
+        ]
+      },
+      "btnRNG_1": {
+        "ports": [
+          "btnRNG",
+          "Debouncer_0/btn"
+        ]
+      },
+      "enable_1": {
+        "ports": [
+          "enable",
+          "RNGCore_0/enable"
+        ]
+      },
+      "Debouncer_0_btn_out": {
+        "ports": [
+          "Debouncer_0/btn_out",
+          "RNGCore_0/btnRNG"
+        ]
+      },
+      "Debouncer_1_btn_out": {
+        "ports": [
+          "Debouncer_1/btn_out",
+          "RNGCore_0/reset"
+        ]
+      },
+      "ClockDivider_0_clk_out": {
+        "ports": [
+          "ClockDivider_0/clk_out",
+          "RNGCore_0/clk"
+        ]
+      },
+      "RNGCore_0_ending": {
+        "ports": [
+          "RNGCore_0/ending",
+          "rgb_b"
+        ]
+      },
+      "RNGCore_0_pos_bala": {
+        "ports": [
+          "RNGCore_0/pos_bala",
+          "leds"
+        ]
+      }
+    }
+  }
+}
