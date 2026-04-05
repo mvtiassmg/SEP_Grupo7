@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log GameModeSel_imp_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source GameModeSel_imp_wrapper.tcl
+EAStep vivado -log RNGCore_imp_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RNGCore_imp_wrapper.tcl

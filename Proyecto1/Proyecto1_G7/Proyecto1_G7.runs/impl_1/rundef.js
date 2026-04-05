@@ -23,9 +23,9 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log GameModeSel_imp_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source GameModeSel_imp_wrapper.tcl -notrace" );
+         "-log RNGCore_imp_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source RNGCore_imp_wrapper.tcl -notrace" );
 
 
 

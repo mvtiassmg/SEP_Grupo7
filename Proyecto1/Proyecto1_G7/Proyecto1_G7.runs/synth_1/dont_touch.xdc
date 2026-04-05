@@ -3,22 +3,22 @@
 
 # XDC: imports/SEP/Zybo-Z7-Master.xdc
 
-# Block Designs: bd/GameModeSel_imp/GameModeSel_imp.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==GameModeSel_imp || ORIG_REF_NAME==GameModeSel_imp} -quiet] -quiet
+# Block Designs: bd/RNGCore_imp/RNGCore_imp.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp || ORIG_REF_NAME==RNGCore_imp} -quiet] -quiet
 
-# IP: bd/GameModeSel_imp/ip/GameModeSel_imp_GameModeSelection_0_0/GameModeSel_imp_GameModeSelection_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==GameModeSel_imp_GameModeSelection_0_0 || ORIG_REF_NAME==GameModeSel_imp_GameModeSelection_0_0} -quiet] -quiet
+# IP: bd/RNGCore_imp/ip/RNGCore_imp_RNGCore_0_0/RNGCore_imp_RNGCore_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_RNGCore_0_0 || ORIG_REF_NAME==RNGCore_imp_RNGCore_0_0} -quiet] -quiet
 
-# IP: bd/GameModeSel_imp/ip/GameModeSel_imp_Debouncer_0_0_1/GameModeSel_imp_Debouncer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==GameModeSel_imp_Debouncer_0_0 || ORIG_REF_NAME==GameModeSel_imp_Debouncer_0_0} -quiet] -quiet
+# IP: bd/RNGCore_imp/ip/RNGCore_imp_ClockDivider_0_0_1/RNGCore_imp_ClockDivider_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_ClockDivider_0_0 || ORIG_REF_NAME==RNGCore_imp_ClockDivider_0_0} -quiet] -quiet
 
-# IP: bd/GameModeSel_imp/ip/GameModeSel_imp_Debouncer_0_1_1/GameModeSel_imp_Debouncer_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==GameModeSel_imp_Debouncer_0_1 || ORIG_REF_NAME==GameModeSel_imp_Debouncer_0_1} -quiet] -quiet
+# IP: bd/RNGCore_imp/ip/RNGCore_imp_Debouncer_0_0_1/RNGCore_imp_Debouncer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_Debouncer_0_0 || ORIG_REF_NAME==RNGCore_imp_Debouncer_0_0} -quiet] -quiet
 
-# IP: bd/GameModeSel_imp/ip/GameModeSel_imp_Debouncer_0_2_1/GameModeSel_imp_Debouncer_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==GameModeSel_imp_Debouncer_0_2 || ORIG_REF_NAME==GameModeSel_imp_Debouncer_0_2} -quiet] -quiet
+# IP: bd/RNGCore_imp/ip/RNGCore_imp_Debouncer_0_2/RNGCore_imp_Debouncer_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_Debouncer_0_2 || ORIG_REF_NAME==RNGCore_imp_Debouncer_0_2} -quiet] -quiet
 
-# IP: bd/GameModeSel_imp/ip/GameModeSel_imp_ClockDivider_0_0_1/GameModeSel_imp_ClockDivider_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==GameModeSel_imp_ClockDivider_0_0 || ORIG_REF_NAME==GameModeSel_imp_ClockDivider_0_0} -quiet] -quiet
+# IP: bd/RNGCore_imp/ip/RNGCore_imp_Debouncer_2_0/RNGCore_imp_Debouncer_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_Debouncer_2_0 || ORIG_REF_NAME==RNGCore_imp_Debouncer_2_0} -quiet] -quiet
 
-# XDC: bd/GameModeSel_imp/GameModeSel_imp_ooc.xdc
+# XDC: bd/RNGCore_imp/RNGCore_imp_ooc.xdc

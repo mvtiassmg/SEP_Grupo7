@@ -1,48 +1,116 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5F4715C6E56A66E2",
+      "boundary_crc": "0x3C547140848AA05A",
       "device": "xc7z010clg400-1",
       "name": "RNGCore_imp",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.1"
+      "tool_version": "2020.1",
+      "validated": "true"
     },
     "design_tree": {
+      "RNGCore_0": "",
       "ClockDivider_0": "",
       "Debouncer_0": "",
-      "Debouncer_1": "",
-      "RNGCore_0": ""
+      "Debouncer_2": "",
+      "Debouncer_3": ""
     },
     "ports": {
       "clk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "RNGCore_imp_clk",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
       "reset": {
         "direction": "I"
       },
-      "btnRNG": {
-        "direction": "I"
-      },
       "enable": {
         "direction": "I"
       },
-      "rgb_b": {
-        "direction": "O"
+      "btnRNG": {
+        "direction": "I"
+      },
+      "shot": {
+        "direction": "I"
       },
       "leds": {
         "direction": "O",
         "left": "3",
         "right": "0"
+      },
+      "rgb_b": {
+        "direction": "O"
       }
     },
     "components": {
+      "RNGCore_0": {
+        "vlnv": "xilinx.com:module_ref:RNGCore:1.0",
+        "xci_name": "RNGCore_imp_RNGCore_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RNGCore",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "btnRNG": {
+            "direction": "I"
+          },
+          "shot": {
+            "direction": "I"
+          },
+          "pos_bala": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "magnum_status": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ending": {
+            "direction": "O"
+          }
+        }
+      },
       "ClockDivider_0": {
         "vlnv": "xilinx.com:module_ref:ClockDivider:1.0",
         "xci_name": "RNGCore_imp_ClockDivider_0_0",
@@ -59,10 +127,34 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "clk_out": {
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "FREQ_HZ": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "PHASE": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
           }
         }
       },
@@ -77,19 +169,35 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "btn": {
             "direction": "I"
           },
           "btn_out": {
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
           }
         }
       },
-      "Debouncer_1": {
+      "Debouncer_2": {
         "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
-        "xci_name": "RNGCore_imp_Debouncer_0_1",
+        "xci_name": "RNGCore_imp_Debouncer_0_2",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "Debouncer",
@@ -98,7 +206,17 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "btn": {
             "direction": "I"
@@ -108,58 +226,75 @@
           }
         }
       },
-      "RNGCore_0": {
-        "vlnv": "xilinx.com:module_ref:RNGCore:1.0",
-        "xci_name": "RNGCore_imp_RNGCore_0_1",
+      "Debouncer_3": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "RNGCore_imp_Debouncer_2_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "RNGCore",
+          "ref_name": "Debouncer",
           "boundary_crc": "0x0"
         },
         "ports": {
           "clk": {
             "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "RNGCore_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
             "direction": "I"
           },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "enable": {
-            "direction": "I"
-          },
-          "btnRNG": {
-            "direction": "I"
-          },
-          "pos_bala": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "ending": {
+          "btn_out": {
             "direction": "O"
           }
         }
       }
     },
     "nets": {
+      "ClockDivider_0_clk_out": {
+        "ports": [
+          "ClockDivider_0/clk_out",
+          "RNGCore_0/clk"
+        ]
+      },
+      "Debouncer_2_btn_out": {
+        "ports": [
+          "Debouncer_2/btn_out",
+          "RNGCore_0/btnRNG"
+        ]
+      },
+      "Debouncer_0_btn_out": {
+        "ports": [
+          "Debouncer_0/btn_out",
+          "RNGCore_0/reset"
+        ]
+      },
+      "Debouncer_3_btn_out": {
+        "ports": [
+          "Debouncer_3/btn_out",
+          "RNGCore_0/shot"
+        ]
+      },
       "clk_1": {
         "ports": [
           "clk",
           "ClockDivider_0/clk",
           "Debouncer_0/clk",
-          "Debouncer_1/clk"
+          "Debouncer_2/clk",
+          "Debouncer_3/clk"
         ]
       },
       "reset_1": {
         "ports": [
           "reset",
-          "Debouncer_1/btn"
-        ]
-      },
-      "btnRNG_1": {
-        "ports": [
-          "btnRNG",
           "Debouncer_0/btn"
         ]
       },
@@ -169,34 +304,28 @@
           "RNGCore_0/enable"
         ]
       },
-      "Debouncer_0_btn_out": {
+      "btnRNG_1": {
         "ports": [
-          "Debouncer_0/btn_out",
-          "RNGCore_0/btnRNG"
+          "btnRNG",
+          "Debouncer_2/btn"
         ]
       },
-      "Debouncer_1_btn_out": {
+      "shot_1": {
         "ports": [
-          "Debouncer_1/btn_out",
-          "RNGCore_0/reset"
-        ]
-      },
-      "ClockDivider_0_clk_out": {
-        "ports": [
-          "ClockDivider_0/clk_out",
-          "RNGCore_0/clk"
-        ]
-      },
-      "RNGCore_0_ending": {
-        "ports": [
-          "RNGCore_0/ending",
-          "rgb_b"
+          "shot",
+          "Debouncer_3/btn"
         ]
       },
       "RNGCore_0_pos_bala": {
         "ports": [
           "RNGCore_0/pos_bala",
           "leds"
+        ]
+      },
+      "RNGCore_0_ending": {
+        "ports": [
+          "RNGCore_0/ending",
+          "rgb_b"
         ]
       }
     }

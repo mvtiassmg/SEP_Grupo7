@@ -2,16 +2,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity RNGCore is
-    generic(
-        MAX_TURNOS : integer := 8
-    );
     port(
         clk      : in  std_logic;  
         reset    : in  std_logic;  
         enable   : in  std_logic;  -- Habilita la generación de la bala
         btnRNG   : in  std_logic;  -- Botón para fijar la posición de la bala
-        pos_bala : out std_logic_vector(3 downto 0);  -- Posición en binario
-        ending   : out std_logic  -- Flag que se activa cuando la bala fue generada
+        shot     : in  std_logic;  -- Señal para rotar el tambor 
+        pos_bala : out std_logic_vector(3 downto 0); -- Posición actual en el tambor
+        magnum_status : out std_logic_vector(7 downto 0); -- Visualización de las balas
+        ending   : out std_logic   -- Flag que se activa cuando la bala fue generada
     );
 end RNGCore;
 
@@ -27,11 +26,12 @@ architecture Behavioral of RNGCore is
         );
     end component;
 
-    component BalaMemory
+    component RNG_Tambor
         port(
-            clk_game   : in  std_logic;
+            clk        : in  std_logic;
             reset      : in  std_logic;
-            load       : in  std_logic;
+            loading    : in  std_logic;
+            shot       : in  std_logic;
             Magnum_in  : in  std_logic_vector(7 downto 0);
             Magnum_out : out std_logic_vector(7 downto 0)
         );
@@ -45,8 +45,8 @@ architecture Behavioral of RNGCore is
     end component;
 
     signal magnum_raw  : std_logic_vector(7 downto 0); 
-    signal magnum_mem  : std_logic_vector(7 downto 0);  
-    signal ending_int  : std_logic;                     
+    signal magnum_curr : std_logic_vector(7 downto 0);  
+    signal ending_int  : std_logic;                      
 
 begin
 
@@ -59,21 +59,23 @@ begin
             ending => ending_int
         );
 
-    inst_BalaMemory : BalaMemory
+    inst_Tambor : RNG_Tambor
         port map(
-            clk_game   => clk,
+            clk        => clk,
             reset      => reset,
-            load       => ending_int,  
+            loading    => ending_int, 
+            shot       => shot,       
             Magnum_in  => magnum_raw,
-            Magnum_out => magnum_mem
+            Magnum_out => magnum_curr
         );
 
     inst_Decoder : Decoder
         port map(
-            magnum   => magnum_mem,
+            magnum   => magnum_curr,
             pos_bala => pos_bala
         );
 
     ending <= ending_int;
+    magnum_status <= magnum_curr; 
 
 end Behavioral;

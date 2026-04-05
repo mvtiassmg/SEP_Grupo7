@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1775414476">
-  <File Type="PA-TCL" Name="GameModeSel_imp_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="GameModeSel_imp_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="GameModeSel_imp_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="GameModeSel_imp_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="GameModeSel_imp_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="GameModeSel_imp_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="GameModeSel_imp_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="GameModeSel_imp_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="GameModeSel_imp_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1775426492">
+  <File Type="PA-TCL" Name="RNGCore_imp_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="RNGCore_imp_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="RNGCore_imp_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="RNGCore_imp_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="RNGCore_imp_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="RNGCore_imp_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="RNGCore_imp_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="RNGCore_imp_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="RNGCore_imp_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/GameModeSM.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Decoder.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/NumPlayersSelector.vhd">
+    <File Path="$PSRCDIR/sources_1/new/RNGBala.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/NumBulletsSelector.vhd">
+    <File Path="$PSRCDIR/sources_1/new/RNG_Tambor.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/GameModeSelection.vhd">
+    <File Path="$PSRCDIR/sources_1/new/RNGCore_v1.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,8 +47,50 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/RNGCore_imp/RNGCore_imp.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/RNGCore_imp/hdl/RNGCore_imp_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/GameModeSM.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/NumPlayersSelector.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/NumBulletsSelector.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/GameModeSelection.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/GameModeSel_imp/GameModeSel_imp.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -56,6 +98,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/GameModeSel_imp/hdl/GameModeSel_imp_wrapper.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -67,57 +110,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Decoder.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RNGBala.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RNGCore.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/RNGCore_imp/RNGCore_imp.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/RNGCore_imp/hdl/RNGCore_imp_wrapper.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/LEDriver.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RNGComparator.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RNGTambor.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -133,7 +126,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="GameModeSel_imp_wrapper"/>
+      <Option Name="TopModule" Val="RNGCore_imp_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -160,13 +153,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_RNGCore_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_ClockDivider_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_GameModeSelection_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_Debouncer_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_Debouncer_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_ClockDivider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_Debouncer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_ClockDivider_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_RNGCore_0_0"/>
 </GenRun>
