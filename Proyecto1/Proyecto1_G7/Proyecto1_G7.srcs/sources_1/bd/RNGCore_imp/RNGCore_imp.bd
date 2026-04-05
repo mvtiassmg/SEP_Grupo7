@@ -6,38 +6,21 @@
       "name": "RNGCore_imp",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.1",
-      "validated": "true"
+      "tool_version": "2020.1"
     },
     "design_tree": {
       "ClockDivider_0": "",
-      "RNGCore_0": "",
       "Debouncer_0": "",
-      "Debouncer_1": ""
+      "Debouncer_1": "",
+      "RNGCore_0": ""
     },
     "ports": {
       "clk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "RNGCore_imp_clk",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "125000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
           }
         }
       },
@@ -76,72 +59,9 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "RNGCore_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "clk_out": {
-            "direction": "O",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "",
-                "value_src": "weak"
-              },
-              "FREQ_HZ": {
-                "value": "",
-                "value_src": "weak"
-              },
-              "PHASE": {
-                "value": "",
-                "value_src": "weak"
-              }
-            }
-          }
-        }
-      },
-      "RNGCore_0": {
-        "vlnv": "xilinx.com:module_ref:RNGCore:1.0",
-        "xci_name": "RNGCore_imp_RNGCore_0_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "RNGCore",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              }
-            }
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "enable": {
-            "direction": "I"
-          },
-          "btnRNG": {
-            "direction": "I"
-          },
-          "pos_bala": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "ending": {
             "direction": "O"
           }
         }
@@ -157,17 +77,7 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "RNGCore_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "btn": {
             "direction": "I"
@@ -188,29 +98,46 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "RNGCore_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "btn": {
             "direction": "I"
           },
           "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "RNGCore_0": {
+        "vlnv": "xilinx.com:module_ref:RNGCore:1.0",
+        "xci_name": "RNGCore_imp_RNGCore_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RNGCore",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "btnRNG": {
+            "direction": "I"
+          },
+          "pos_bala": {
             "direction": "O",
-            "parameters": {
-              "POLARITY": {
-                "value": "",
-                "value_src": "weak"
-              }
-            }
+            "left": "3",
+            "right": "0"
+          },
+          "ending": {
+            "direction": "O"
           }
         }
       }

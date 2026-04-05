@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"RNGCore_imp": {
-			"proto_instances": {
-			}
-		}
-	}
-}

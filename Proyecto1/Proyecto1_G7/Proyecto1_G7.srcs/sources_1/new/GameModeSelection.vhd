@@ -28,23 +28,20 @@ end GameModeSelection;
 
 architecture Structural of GameModeSelection is
 
-    -- Señales de control de la FSM
+    -- Señales de control de la SM
     signal en_sel_p        : std_logic;
     signal en_sel_b        : std_logic;
     signal sig_mode_ready  : std_logic; 
     
-    -- Señales de datos de los selectores (out_p ahora es de 3 bits)
     signal out_p           : std_logic_vector(2 downto 0);
     signal out_b           : std_logic_vector(1 downto 0);
     
-    -- Registros para mantener la selección (reg_players ahora es de 3 bits)
     signal reg_players     : std_logic_vector(2 downto 0) := "010"; -- Default 2 jug.
     signal reg_bullets     : std_logic_vector(1 downto 0) := "01";  -- Default 1 bala
 
 begin
 
-    -- 1. Instancia de la Máquina de Estados
-    U_FSM: entity work.GameModeSM
+    inst_SM: entity work.GameModeSM
         port map (
             clk            => clk,
             reset          => reset,
@@ -55,22 +52,19 @@ begin
             mode_ready     => sig_mode_ready
         );
 
-    -- 2. Instancia del Selector de Jugadores (Retorna 3 bits: "010", "011", "100")
-    U_PLAYERS: entity work.NumPlayersSelector
+    inst_NumPlayers: entity work.NumPlayersSelector
         port map (
             sw          => sw_in,
             num_players => out_p
         );
 
-    -- 3. Instancia del Selector de Balas (Recibe 3 bits de jugadores)
-    U_BULLETS: entity work.NumBulletsSelector
+    inst_NumBullets: entity work.NumBulletsSelector
         port map (
             sw          => sw_in,
             num_players => reg_players, 
             num_bullets => out_b
         );
 
-    -- Proceso secuencial para registrar las selecciones al confirmar
     process(clk)
     begin
         if rising_edge(clk) then
@@ -90,7 +84,6 @@ begin
     end process;
 
     -- Lógica de visualización en LEDs (Muestra 3 bits)
-    -- Si muestra balas (2 bits), el bit más significativo será '0'
     leds_visual <= out_p when en_sel_p = '1' else
                    ("0" & out_b) when en_sel_b = '1' else
                    "000";
@@ -101,7 +94,6 @@ begin
                COLOR_DONE    when sig_mode_ready = '1' else
                COLOR_IDLE;
 
-    -- Asignación de salidas finales
     final_players <= reg_players;
     final_bullets <= reg_bullets;
     mode_ready    <= sig_mode_ready;
