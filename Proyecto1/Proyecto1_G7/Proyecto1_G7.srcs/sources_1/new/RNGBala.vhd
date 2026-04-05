@@ -3,73 +3,59 @@ use IEEE.std_logic_1164.ALL;
 use IEEE.numeric_std.ALL;
 
 entity RNGBala is
-    port(
-        clk         : in std_logic;
-        enable      : in std_logic;
-        reset       : in std_logic;
-        btnRNG      : in std_logic; -- se usará el botón shoot
-        num_bullets : in std_logic_vector(1 downto 0); 
-        Magnum      : out std_logic_vector(7 downto 0);
-        ending      : out std_logic
-    );
-end RNGBala;
+    port(clk : in std_logic;
+         enable : in std_logic;
+         btnRNG : in std_logic;
+         Magnum : out std_logic_vector(7 downto 0);
+         ending : out std_logic);
+
+    end RNGBala;
 
 architecture Behavioral of RNGBala is
-    signal count       : integer range 0 to 7 := 0;
-    signal bullets_cnt : integer range 0 to 3 := 0;
-    signal temp_magnum : std_logic_vector(7 downto 0) := (others => '0');
-    signal btn_prev    : std_logic := '0';
-    signal rEnding     : std_logic := '0';
+
+    signal count : integer := 0;
+    signal preMagnum : integer;
+    signal rEnding : std_logic;
+    signal GenRng : std_logic;
 begin
-
     RNGen : process(clk)
-        variable pos : integer range 0 to 7;
-        variable found : boolean;
-        variable target_bullets : integer;
-    begin
-        if rising_edge(clk) then
-            btn_prev <= btnRNG;
-            target_bullets := to_integer(unsigned(num_bullets));
+        begin
+            if rising_edge(clk) then
+                if enable = '0' then
+                    ending <= '0';
+                    count <= 0;
+                    rEnding <= '0';
+                    GenRng <= '0';
+                    Magnum <= "00000000";
 
-            if enable = '0' or reset = '1' then
-                ending <= '0';
-                rEnding <= '0';
-                count <= 0;
-                bullets_cnt <= 0;
-                temp_magnum <= (others => '0');
-                Magnum <= (others => '0');
-            
-            elsif enable = '1' and rEnding = '0' then 
-                count <= count + 1;                       
-
-                if (btnRNG = '1' and btn_prev = '0') and (bullets_cnt < target_bullets) then
+                elsif enable = '1' and rEnding = '0' then           
                     
-                    pos := count mod 8; 
-                    found := false;
+                    if GenRng = '0' then
+                        count <= count + 1;                    
+                    end if;
 
-                    for i in 0 to 7 loop
-                        if not found then
-                            if temp_magnum(pos) = '0' then
-                                temp_magnum(pos) <= '1';
-                                bullets_cnt <= bullets_cnt + 1;
-                                found := true;
-                            else
-                                if pos = 7 then 
-                                    pos := 0;
-                                else 
-                                    pos := pos + 1;                                    
-                                end if;  
-                            end if;
-                        end if;
-                    end loop;
-                end if;
+                    if btnRNG = '1' then
+                    
+                        GenRng <= '1';
+                        case count mod 8 is
+                        
+                            when 0 => Magnum <= "00000001";
+                            when 1 => Magnum <= "00000010";
+                            when 2 => Magnum <= "00000100";
+                            when 3 => Magnum <= "00001000";
+                            when 4 => Magnum <= "00010000";
+                            when 5 => Magnum <= "00100000";
+                            when 6 => Magnum <= "01000000";
+                            when 7 => Magnum <= "10000000";
+                            when others => Magnum <= (others => '0');
+                        end case;
 
-                if bullets_cnt = target_bullets then
-                    rEnding <= '1';
-                    ending <= '1';
-                    Magnum <= temp_magnum; 
+                        
+                        rEnding <= '1'; 
+                        ending <= '1';
+                        count <= 0;
+                    end if;
                 end if;
-            end if;
-        end if;             
-    end process; 
+            end if;             
+        end process; 
 end Behavioral;
