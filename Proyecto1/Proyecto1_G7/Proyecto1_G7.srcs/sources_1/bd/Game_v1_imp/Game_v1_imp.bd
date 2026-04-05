@@ -1,0 +1,425 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7AAC342F415222B3",
+      "device": "xc7z010clg400-1",
+      "name": "Game_v1_imp",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "RNGCore_0": "",
+      "Sep_SM_0": "",
+      "Debouncer_0": "",
+      "ClockDivider_0": "",
+      "Debouncer_1": "",
+      "Debouncer_3": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Game_v1_imp_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "enable": {
+        "direction": "I"
+      },
+      "leds": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "rgb_r": {
+        "direction": "O"
+      },
+      "rgb_b": {
+        "direction": "O"
+      },
+      "rgb_g": {
+        "direction": "O"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "btnRNG": {
+        "direction": "I"
+      },
+      "shoot": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "RNGCore_0": {
+        "vlnv": "xilinx.com:module_ref:RNGCore:1.0",
+        "xci_name": "Game_v1_imp_RNGCore_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RNGCore",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "btnRNG": {
+            "direction": "I"
+          },
+          "shot": {
+            "direction": "I"
+          },
+          "pos_bala": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "magnum_status": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ending": {
+            "direction": "O"
+          }
+        }
+      },
+      "Sep_SM_0": {
+        "vlnv": "xilinx.com:module_ref:Sep_SM:1.0",
+        "xci_name": "Game_v1_imp_Sep_SM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Sep_SM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "btn_shoot": {
+            "direction": "I"
+          },
+          "magnum_status": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "leds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "rgb_r": {
+            "direction": "O"
+          },
+          "rgb_g": {
+            "direction": "O"
+          },
+          "rgb_b": {
+            "direction": "O"
+          },
+          "shot_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "Game_v1_imp_Debouncer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Game_v1_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
+          }
+        }
+      },
+      "ClockDivider_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider:1.0",
+        "xci_name": "Game_v1_imp_ClockDivider_0_0",
+        "parameters": {
+          "FREQ_DES": {
+            "value": "100"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Game_v1_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "FREQ_HZ": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "PHASE": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
+          }
+        }
+      },
+      "Debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "Game_v1_imp_Debouncer_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Game_v1_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_3": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "Game_v1_imp_Debouncer_0_3",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Game_v1_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Debouncer_0_btn_out": {
+        "ports": [
+          "Debouncer_0/btn_out",
+          "RNGCore_0/reset",
+          "Sep_SM_0/reset"
+        ]
+      },
+      "Debouncer_1_btn_out": {
+        "ports": [
+          "Debouncer_1/btn_out",
+          "RNGCore_0/btnRNG"
+        ]
+      },
+      "Debouncer_3_btn_out": {
+        "ports": [
+          "Debouncer_3/btn_out",
+          "Sep_SM_0/btn_shoot"
+        ]
+      },
+      "RNGCore_0_magnum_status": {
+        "ports": [
+          "RNGCore_0/magnum_status",
+          "Sep_SM_0/magnum_status"
+        ]
+      },
+      "RNGCore_0_ending": {
+        "ports": [
+          "RNGCore_0/ending",
+          "Sep_SM_0/start"
+        ]
+      },
+      "ClockDivider_0_clk_out": {
+        "ports": [
+          "ClockDivider_0/clk_out",
+          "RNGCore_0/clk",
+          "Sep_SM_0/clk"
+        ]
+      },
+      "Sep_SM_0_shot_out": {
+        "ports": [
+          "Sep_SM_0/shot_out",
+          "RNGCore_0/shot"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ClockDivider_0/clk",
+          "Debouncer_0/clk",
+          "Debouncer_1/clk",
+          "Debouncer_3/clk"
+        ]
+      },
+      "enable_1": {
+        "ports": [
+          "enable",
+          "RNGCore_0/enable"
+        ]
+      },
+      "Sep_SM_0_leds": {
+        "ports": [
+          "Sep_SM_0/leds",
+          "leds"
+        ]
+      },
+      "Sep_SM_0_rgb_r": {
+        "ports": [
+          "Sep_SM_0/rgb_r",
+          "rgb_r"
+        ]
+      },
+      "Sep_SM_0_rgb_g": {
+        "ports": [
+          "Sep_SM_0/rgb_g",
+          "rgb_g"
+        ]
+      },
+      "Sep_SM_0_rgb_b": {
+        "ports": [
+          "Sep_SM_0/rgb_b",
+          "rgb_b"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "Debouncer_0/btn"
+        ]
+      },
+      "btnRNG_1": {
+        "ports": [
+          "btnRNG",
+          "Debouncer_1/btn"
+        ]
+      },
+      "shoot_1": {
+        "ports": [
+          "shoot",
+          "Debouncer_3/btn"
+        ]
+      }
+    }
+  }
+}

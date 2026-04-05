@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Game_v1_imp": {
+			"proto_instances": {
+			}
+		}
+	}
+}

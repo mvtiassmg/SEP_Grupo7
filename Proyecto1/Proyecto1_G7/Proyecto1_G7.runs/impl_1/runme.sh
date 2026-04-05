@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log RNGCore_imp_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source RNGCore_imp_wrapper.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log Game_v1_imp_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Game_v1_imp_wrapper.tcl -notrace
 
 

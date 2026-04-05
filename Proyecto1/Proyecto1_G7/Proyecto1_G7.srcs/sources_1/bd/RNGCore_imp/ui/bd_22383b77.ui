@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.23114",
-   "Default View_TopLeft":"-417,-130",
+   "Default View_ScaleFactor":"0.980916",
+   "Default View_TopLeft":"-406,-38",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -29,7 +29,7 @@ preplace netloc shot_1 1 0 1 NJ 440
 preplace netloc RNGCore_0_pos_bala 1 2 1 NJ 220
 preplace netloc RNGCore_0_ending 1 2 1 NJ 260
 levelinfo -pg 1 0 120 370 530
-pagesize -pg 1 -db -bbox -sgen -100 0 640 500
+pagesize -pg 1 -db -bbox -sgen -100 0 650 500
 "
 }
 0

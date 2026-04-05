@@ -3,22 +3,25 @@
 
 # XDC: imports/SEP/Zybo-Z7-Master.xdc
 
-# Block Designs: bd/RNGCore_imp/RNGCore_imp.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp || ORIG_REF_NAME==RNGCore_imp} -quiet] -quiet
+# Block Designs: bd/Game_v1_imp/Game_v1_imp.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp || ORIG_REF_NAME==Game_v1_imp} -quiet] -quiet
 
-# IP: bd/RNGCore_imp/ip/RNGCore_imp_RNGCore_0_0/RNGCore_imp_RNGCore_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_RNGCore_0_0 || ORIG_REF_NAME==RNGCore_imp_RNGCore_0_0} -quiet] -quiet
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_RNGCore_0_0 || ORIG_REF_NAME==Game_v1_imp_RNGCore_0_0} -quiet] -quiet
 
-# IP: bd/RNGCore_imp/ip/RNGCore_imp_ClockDivider_0_0_1/RNGCore_imp_ClockDivider_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_ClockDivider_0_0 || ORIG_REF_NAME==RNGCore_imp_ClockDivider_0_0} -quiet] -quiet
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_Sep_SM_0_0 || ORIG_REF_NAME==Game_v1_imp_Sep_SM_0_0} -quiet] -quiet
 
-# IP: bd/RNGCore_imp/ip/RNGCore_imp_Debouncer_0_0_1/RNGCore_imp_Debouncer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_Debouncer_0_0 || ORIG_REF_NAME==RNGCore_imp_Debouncer_0_0} -quiet] -quiet
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_Debouncer_0_0 || ORIG_REF_NAME==Game_v1_imp_Debouncer_0_0} -quiet] -quiet
 
-# IP: bd/RNGCore_imp/ip/RNGCore_imp_Debouncer_0_2/RNGCore_imp_Debouncer_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_Debouncer_0_2 || ORIG_REF_NAME==RNGCore_imp_Debouncer_0_2} -quiet] -quiet
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_ClockDivider_0_0 || ORIG_REF_NAME==Game_v1_imp_ClockDivider_0_0} -quiet] -quiet
 
-# IP: bd/RNGCore_imp/ip/RNGCore_imp_Debouncer_2_0/RNGCore_imp_Debouncer_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RNGCore_imp_Debouncer_2_0 || ORIG_REF_NAME==RNGCore_imp_Debouncer_2_0} -quiet] -quiet
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_Debouncer_0_1 || ORIG_REF_NAME==Game_v1_imp_Debouncer_0_1} -quiet] -quiet
 
-# XDC: bd/RNGCore_imp/RNGCore_imp_ooc.xdc
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_Debouncer_0_3 || ORIG_REF_NAME==Game_v1_imp_Debouncer_0_3} -quiet] -quiet
+
+# XDC: bd/Game_v1_imp/Game_v1_imp_ooc.xdc

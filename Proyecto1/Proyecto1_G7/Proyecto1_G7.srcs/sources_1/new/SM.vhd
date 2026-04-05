@@ -1,126 +1,104 @@
 library IEEE;
 use IEEE.std_logic_1164.ALL;
-
+use IEEE.numeric_std.ALL;
 
 entity Sep_SM is
     Port (
-        clk    : in  std_logic;
-        start  : in  std_logic := '0';
-        nxt    : in  std_logic := '0';
-        shoot  : in  std_logic := '0';  -- Viene de RNGComparator
-        seguro : in  std_logic := '0';  -- Viene de RNGComparator
-        leds   : out std_logic_vector(3 downto 0);
-        rgb_r  : out std_logic;
-        rgb_g  : out std_logic;
-        rgb_b  : out std_logic;
-        game_en : out std_logic
+        clk           : in  std_logic;
+        reset         : in  std_logic;
+        start         : in  std_logic; 
+        btn_shoot     : in  std_logic;
+        magnum_status : in  std_logic_vector(7 downto 0); 
+        leds          : out std_logic_vector(3 downto 0);
+        rgb_r         : out std_logic;
+        rgb_g         : out std_logic;
+        rgb_b         : out std_logic;
+        shot_out      : out std_logic  -- Pulso para girar el tambor
     );
 end Sep_SM;
 
 architecture Behavioral of Sep_SM is
 
-    signal state : integer range 0 to 8 := 0;
-    signal str   : std_logic := '0';
+    type state_type is (IDLE, JUGANDO, EVALUAR, SEGURO, MUERTE);
+    signal state : state_type := IDLE;
+    
+    signal turno_j1 : std_logic := '1'; -- '1' turno J1, '0' turno J2
+    signal btn_prev : std_logic := '0';
 
 begin
 
     process(clk)
-
-        variable pre_nxt : std_logic := '1';
-        variable count   : integer   := 0;
-
+        variable delay_cnt : integer := 0;
     begin
         if rising_edge(clk) then
-
-            -- ESTADO 0: IDLE
-            if state = 0 then
-                leds    <= "1111";
-                rgb_r   <= '1';  
-                rgb_g   <= '1';
-                rgb_b   <= '1';
-                game_en <= '0';
-
-                if start = '1' then
-                    state <= 1;
-                    str   <= '1';
-                end if;
-            end if;
-
-            -- ESTADOS 1-6: TURNO ACTIVO
-            if state >= 1 and state <= 6 then
-                rgb_r   <= '0';  -- Verde
-                rgb_g   <= '1';
-                rgb_b   <= '0';
-                game_en <= '1';
-
-                -- Resultado del disparo: shoot o seguro
-                if shoot = '1' then
-                    state <= 7;  
-                elsif seguro = '1' then
-                    state <= 8;  
-                end if;
-
-                -- Avance de turno con nxt
-                if nxt = '1' and pre_nxt = '1' and str = '1' then
-                    count := count + 1;
-
-                    if count >= 1000000 then
-                        case state is
-                            when 1 => leds <= "0001";
-                            when 2 => leds <= "0010";
-                            when 3 => leds <= "0011";
-                            when 4 => leds <= "0100";
-                            when 5 => leds <= "0101";
-                            when 6 => leds <= "0110";
-                            when others => null;
-                        end case;
-
-                        pre_nxt := '0';
-
-                        if state = 6 then
-                            state <= 1;  
-                        else
-                            state <= state + 1;
+            if reset = '1' then
+                state <= IDLE;
+                btn_prev <= '0';
+            else
+                btn_prev <= btn_shoot; 
+                
+                case state is
+                    -- ESTADO 0: Esperando inicio
+                    when IDLE =>
+                        leds <= "1100"; -- J1 y J2 listos
+                        rgb_r <= '1'; rgb_g <= '1'; rgb_b <= '1'; -- Blanco
+                        shot_out <= '0';
+                        if start = '1' then
+                            state <= JUGANDO;
                         end if;
 
-                        count := 0;
-                    end if;
-                end if;
+                    -- ESTADO 1: Turno activo, esperando gatillo
+                    when JUGANDO =>
+                        rgb_r <= '0'; rgb_g <= '1'; rgb_b <= '0'; -- VERDE
+                        shot_out <= '0';
+                        
+                        -- Mostrar quién está jugando
+                        if turno_j1 = '1' then leds <= "1000"; else leds <= "0100"; end if;
 
-                if nxt = '0' then
-                    pre_nxt := '1';
-                    count   := 0;
-                end if;
+                        if btn_shoot = '1' and btn_prev = '0' then
+                            state <= EVALUAR;
+                        end if;
+
+                    -- ESTADO 2: Se tiró del gatillo, revisamos el bit 0
+                    when EVALUAR =>
+                        shot_out <= '1'; -- Mandamos a girar el tambor para el prox turno
+                        if magnum_status(0) = '1' then
+                            state <= MUERTE;
+                        else
+                            state <= SEGURO;
+                        end if;
+
+                    -- ESTADO 3: Disparo seguro (AZUL)
+                    when SEGURO =>
+                        rgb_r <= '0'; rgb_g <= '0'; rgb_b <= '1'; -- AZUL
+                        shot_out <= '0';
+                        
+                        -- Pausa pequeña o esperar a soltar botón para cambiar turno
+                        if btn_shoot = '0' then 
+                            turno_j1 <= not turno_j1; -- Cambio de jugador
+                            state <= JUGANDO;
+                        end if;
+
+                    -- ESTADO 4: Alguien murió (ROJO)
+                    when MUERTE =>
+                        rgb_r <= '1'; rgb_g <= '0'; rgb_b <= '0'; -- ROJO
+                        shot_out <= '0';
+                        
+                        -- Los últimos dos LEDs se prenden (indicando muerte)
+                        if turno_j1 = '1' then 
+                            leds <= "0111"; -- Murió J1, queda J2 y aviso
+                        else 
+                            leds <= "1011"; -- Murió J2, queda J1 y aviso
+                        end if;
+
+                        if start = '1' then
+                            state <= IDLE;
+                            turno_j1 <= '1';
+                        end if;
+
+                    when others => state <= IDLE;
+                end case;
             end if;
-
-            -- ESTADO 7: DISPARO - jugador muerto
-            if state = 7 then
-                leds    <= "1111";  -- Todos los LEDs encendidos
-                rgb_r   <= '1';     --
-                rgb_g   <= '0';
-                rgb_b   <= '0';
-                game_en <= '0';
-
-                if start = '1' then
-                    state <= 0;
-                    str   <= '0';
-                end if;
-            end if;
-
-            -- ESTADO 8: SEGURO - jugador sobrevivió
-            if state = 8 then
-                leds    <= "0000";  
-                rgb_r   <= '0';     
-                rgb_g   <= '0';
-                rgb_b   <= '1';
-                game_en <= '0';
-
-                if nxt = '1' then
-                    state   <= state - 7;  
-                    game_en <= '1';
-                end if;
-            end if;
-
         end if;
     end process;
 

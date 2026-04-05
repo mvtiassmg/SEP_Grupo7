@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log RNGCore_imp_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RNGCore_imp_wrapper.tcl" );
+         "-log Game_v1_imp_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Game_v1_imp_wrapper.tcl" );
 
 
 
