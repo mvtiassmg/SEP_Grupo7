@@ -1,5 +1,19 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.sim/sim_1/impl/timing/xsim/tb_ClockDivider_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ClockDivider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.sim/sim_1/impl/timing/xsim/tb_RNGCore_wrapper_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RNGCore_imp
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_ClockDivider_0_0
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_ClockDivider_0_0_ClockDivider
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_Debouncer_0_0
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_Debouncer_0_0_ClockDivider
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_Debouncer_0_0_Debouncer
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_Debouncer_0_1
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_Debouncer_0_1_ClockDivider
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_Debouncer_0_1_Debouncer
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_RNGCore_0_1
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_RNGCore_0_1_BalaMemory
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_RNGCore_0_1_Decoder
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_RNGCore_0_1_RNGBala
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_RNGCore_0_1_RNGCore
+INFO: [VRFC 10-311] analyzing module RNGCore_imp_wrapper
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sim_1/new/ClockDivider_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_ClockDivider'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sim_1/new/tb_RNGCore_imp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_RNGCore_wrapper'

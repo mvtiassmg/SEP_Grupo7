@@ -1,0 +1,349 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8E81CEA452DAFE20",
+      "device": "xc7z010clg400-1",
+      "name": "GameModeSel_imp",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Debouncer_0": "",
+      "Debouncer_1": "",
+      "Debouncer_2": "",
+      "ClockDivider_0": "",
+      "GameModeSelection_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "GameModeSel_imp_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "start": {
+        "direction": "I"
+      },
+      "btn_next": {
+        "direction": "I"
+      },
+      "sw": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "leds": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "rgb_out": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "GameModeSel_imp_Debouncer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "GameModeSel_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
+          }
+        }
+      },
+      "Debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "GameModeSel_imp_Debouncer_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "GameModeSel_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_2": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "GameModeSel_imp_Debouncer_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "GameModeSel_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "ClockDivider_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider:1.0",
+        "xci_name": "GameModeSel_imp_ClockDivider_0_0",
+        "parameters": {
+          "FREQ_DES": {
+            "value": "100"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "GameModeSel_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "FREQ_HZ": {
+                "value": "",
+                "value_src": "weak"
+              },
+              "PHASE": {
+                "value": "",
+                "value_src": "weak"
+              }
+            }
+          }
+        }
+      },
+      "GameModeSelection_0": {
+        "vlnv": "xilinx.com:module_ref:GameModeSelection:1.0",
+        "xci_name": "GameModeSel_imp_GameModeSelection_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "GameModeSelection",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "btn_start": {
+            "direction": "I"
+          },
+          "btn_next": {
+            "direction": "I"
+          },
+          "sw_in": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "leds_visual": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "rgb_out": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "final_players": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "final_bullets": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "mode_ready": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Debouncer_0_btn_out": {
+        "ports": [
+          "Debouncer_0/btn_out",
+          "GameModeSelection_0/reset"
+        ]
+      },
+      "Debouncer_1_btn_out": {
+        "ports": [
+          "Debouncer_1/btn_out",
+          "GameModeSelection_0/btn_start"
+        ]
+      },
+      "Debouncer_2_btn_out": {
+        "ports": [
+          "Debouncer_2/btn_out",
+          "GameModeSelection_0/btn_next"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Debouncer_0/clk",
+          "Debouncer_1/clk",
+          "Debouncer_2/clk",
+          "ClockDivider_0/clk"
+        ]
+      },
+      "ClockDivider_0_clk_out": {
+        "ports": [
+          "ClockDivider_0/clk_out",
+          "GameModeSelection_0/clk"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "Debouncer_0/btn"
+        ]
+      },
+      "start_1": {
+        "ports": [
+          "start",
+          "Debouncer_1/btn"
+        ]
+      },
+      "btn_next_1": {
+        "ports": [
+          "btn_next",
+          "Debouncer_2/btn"
+        ]
+      },
+      "sw_1": {
+        "ports": [
+          "sw",
+          "GameModeSelection_0/sw_in"
+        ]
+      },
+      "GameModeSelection_0_leds_visual": {
+        "ports": [
+          "GameModeSelection_0/leds_visual",
+          "leds"
+        ]
+      },
+      "GameModeSelection_0_rgb_out": {
+        "ports": [
+          "GameModeSelection_0/rgb_out",
+          "rgb_out"
+        ]
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ entity RNGTambor is
         clk_game : in  std_logic;
         reset    : in  std_logic;
         turn     : in  std_logic;
-        pos      : out std_logic_vector(2 downto 0)
+        pos      : out std_logic_vector(3 downto 0)
     );
 end RNGTambor;
 

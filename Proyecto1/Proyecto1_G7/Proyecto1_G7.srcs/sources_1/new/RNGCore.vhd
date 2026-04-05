@@ -6,12 +6,12 @@ entity RNGCore is
         MAX_TURNOS : integer := 8
     );
     port(
-        clk      : in  std_logic;  -- Reloj del sistema
-        reset    : in  std_logic;  -- Reset general 
+        clk      : in  std_logic;  
+        reset    : in  std_logic;  
         enable   : in  std_logic;  -- Habilita la generación de la bala
         btnRNG   : in  std_logic;  -- Botón para fijar la posición de la bala
         pos_bala : out std_logic_vector(3 downto 0);  -- Posición en binario
-        ending   : out std_logic   -- '1' cuando la bala ya fue generada y almacenada
+        ending   : out std_logic  -- Flag que se activa cuando la bala fue generada
     );
 end RNGCore;
 

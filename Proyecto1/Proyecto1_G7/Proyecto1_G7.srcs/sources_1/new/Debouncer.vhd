@@ -24,7 +24,6 @@ architecture Behavioral of Debouncer is
 
 begin
 
-    -- Instancia de ClockDivider
     clk_div_inst : entity work.ClockDivider
         generic map (
             FREQ_IN  => FREQ_IN,

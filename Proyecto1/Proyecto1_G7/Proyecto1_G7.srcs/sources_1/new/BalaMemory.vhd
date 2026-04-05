@@ -13,7 +13,7 @@ end BalaMemory;
 
 architecture Behavioral of BalaMemory is
 
-    signal reg : std_logic_vector(7 downto 0) := (others => '0'); -- Registro de datos
+    signal reg : std_logic_vector(7 downto 0) := (others => '0'); 
 
 begin
 
@@ -21,10 +21,10 @@ begin
     begin
         if rising_edge(clk_game) then
             if reset = '1' then
-                reg <= (others => '0'); -- Se limpia la memoria
+                reg <= (others => '0'); 
 
             elsif load = '1' then
-                reg <= Magnum_in; -- Se almacena en la memoria
+                reg <= Magnum_in; 
 
             end if;
 

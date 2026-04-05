@@ -2,6 +2,7 @@
 2020.1
 May 27 2020
 20:09:33
-D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.sim/sim_1/impl/timing/xsim/tb_ClockDivider_time_impl.v,1774797043,verilog,,,,ClockDivider;glbl,,,,,,,,
+D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.sim/sim_1/impl/timing/xsim/tb_RNGCore_wrapper_time_impl.v,1774870816,verilog,,,,RNGCore_imp;RNGCore_imp_ClockDivider_0_0;RNGCore_imp_ClockDivider_0_0_ClockDivider;RNGCore_imp_Debouncer_0_0;RNGCore_imp_Debouncer_0_0_ClockDivider;RNGCore_imp_Debouncer_0_0_Debouncer;RNGCore_imp_Debouncer_0_1;RNGCore_imp_Debouncer_0_1_ClockDivider;RNGCore_imp_Debouncer_0_1_Debouncer;RNGCore_imp_RNGCore_0_1;RNGCore_imp_RNGCore_0_1_BalaMemory;RNGCore_imp_RNGCore_0_1_Decoder;RNGCore_imp_RNGCore_0_1_RNGBala;RNGCore_imp_RNGCore_0_1_RNGCore;RNGCore_imp_wrapper;glbl,,,,,,,,
 D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sim_1/new/ClockDivider_tb.vhd,1774796960,vhdl,,,,tb_clockdivider,,,,,,,,
+D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sim_1/new/tb_RNGCore_imp.vhd,1774870802,vhdl,,,,tb_rngcore_wrapper,,,,,,,,
 D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/new/ClockDivider.vhd,1774795837,vhdl,D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sim_1/new/ClockDivider_tb.vhd,,,clockdivider,,,,,,,,

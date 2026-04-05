@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar 30 07:13:06 2026
+# Process ID: 11844
+# Current directory: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16900 D:\SEP\SEP_Grupo7\Proyecto1\Proyecto1_G7\Proyecto1_G7.xpr
+# Log file: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/vivado.log
+# Journal file: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/RNGCore_imp_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/RNGCore_imp_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+open_bd_design {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/RNGCore_imp/RNGCore_imp.bd}
+delete_bd_objs [get_bd_cells system_ila_1]
+delete_bd_objs [get_bd_cells system_ila_0]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { btnRNG_1 } ]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { clk_1 } ]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { enable_1 } ]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { reset_1 } ]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { RNGCore_0_ending } ]
+endgroup
+regenerate_bd_layout -routing
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { RNGCore_0_pos_bala } ]
+endgroup
+regenerate_bd_layout -routing
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+delete_bd_objs [get_bd_cells ila_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
+endgroup
+delete_bd_objs [get_bd_cells system_ila_0]
+save_bd_design
+close_bd_design [get_bd_designs RNGCore_imp]
+open_bd_design {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/RNGCore_imp/RNGCore_imp.bd}
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/RNGCore_imp_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/RNGCore_imp_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+generate_target Simulation [get_files D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/RNGCore_imp/RNGCore_imp.bd]
+export_ip_user_files -of_objects [get_files D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/RNGCore_imp/RNGCore_imp.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/RNGCore_imp/RNGCore_imp.bd] -directory D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.ip_user_files/sim_scripts -ip_user_files_dir D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.ip_user_files -ipstatic_source_dir D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/compile_simlib/modelsim} {questa=D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/compile_simlib/questa} {riviera=D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/compile_simlib/riviera} {activehdl=D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -mode post-implementation -type timing
+source tb_RNGCore_wrapper.tcl
+close_sim
+launch_simulation -mode post-implementation -type timing
+source tb_RNGCore_wrapper.tcl
+restart
+run 1 s
+close_sim
+launch_simulation -mode post-implementation -type timing
+source tb_RNGCore_wrapper.tcl
+restart
+run 1000 ns
+close_sim
+launch_simulation -mode post-implementation -type timing
+source tb_RNGCore_wrapper.tcl
+restart
+run 1000 ns
+restart
+run all
+restart
+run 1000 ns
+run 1000 ns
+run 1000 ns
+restart
+run 1000 ns
+run 1000 ns
+restart
+run 1000 ns
+close_sim
+open_bd_design {D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/RNGCore_imp/RNGCore_imp.bd}

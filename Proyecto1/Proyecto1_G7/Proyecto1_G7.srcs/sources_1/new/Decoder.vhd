@@ -11,7 +11,6 @@ end Decoder;
 architecture Behavioral of Decoder is
 begin
 
-   
     with magnum select
         pos_bala <= "0001" when "00000001", -- Posición 1
                     "0010" when "00000010", -- Posición 2
@@ -21,6 +20,6 @@ begin
                     "0110" when "00100000", -- Posición 6
                     "0111" when "01000000", -- Posición 7
                     "1000" when "10000000", -- Posición 8
-                    "0000" when others;     -- Estado de seguridad (Sin bala/Error)
+                    "0000" when others;     
 
 end Behavioral;

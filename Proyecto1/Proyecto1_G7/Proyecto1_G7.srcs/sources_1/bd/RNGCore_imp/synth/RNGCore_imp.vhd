@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Mon Mar 30 00:32:12 2026
+--Date        : Mon Mar 30 08:25:01 2026
 --Host        : MS061325 running 64-bit major release  (build 9200)
 --Command     : generate_target RNGCore_imp.bd
 --Design      : RNGCore_imp
@@ -27,20 +27,6 @@ entity RNGCore_imp is
 end RNGCore_imp;
 
 architecture STRUCTURE of RNGCore_imp is
-  component RNGCore_imp_Debouncer_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC;
-    btn_out : out STD_LOGIC
-  );
-  end component RNGCore_imp_Debouncer_0_0;
-  component RNGCore_imp_Debouncer_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC;
-    btn_out : out STD_LOGIC
-  );
-  end component RNGCore_imp_Debouncer_0_1;
   component RNGCore_imp_ClockDivider_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -57,6 +43,20 @@ architecture STRUCTURE of RNGCore_imp is
     ending : out STD_LOGIC
   );
   end component RNGCore_imp_RNGCore_0_1;
+  component RNGCore_imp_Debouncer_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    btn_out : out STD_LOGIC
+  );
+  end component RNGCore_imp_Debouncer_0_0;
+  component RNGCore_imp_Debouncer_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    btn_out : out STD_LOGIC
+  );
+  end component RNGCore_imp_Debouncer_0_1;
   signal ClockDivider_0_clk_out : STD_LOGIC;
   signal Debouncer_0_btn_out : STD_LOGIC;
   signal Debouncer_1_btn_out : STD_LOGIC;

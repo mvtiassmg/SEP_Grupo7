@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot RNGCore_imp xil_defaultlib.RNGCore_imp -log elaborate.log

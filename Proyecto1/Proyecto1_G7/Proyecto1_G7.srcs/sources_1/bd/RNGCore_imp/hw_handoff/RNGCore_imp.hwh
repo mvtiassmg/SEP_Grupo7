@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 30 00:32:13 2026" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 30 08:25:01 2026" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="RNGCore_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="ClockDivider_0" PORT="clk"/>
         <CONNECTION INSTANCE="Debouncer_0" PORT="clk"/>
         <CONNECTION INSTANCE="Debouncer_1" PORT="clk"/>
-        <CONNECTION INSTANCE="ClockDivider_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="reset" SIGIS="undef" SIGNAME="External_Ports_reset">

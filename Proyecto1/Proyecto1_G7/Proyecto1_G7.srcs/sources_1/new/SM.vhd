@@ -35,7 +35,7 @@ begin
             -- ESTADO 0: IDLE
             if state = 0 then
                 leds    <= "1111";
-                rgb_r   <= '1';  -- Blanco = R+G+B
+                rgb_r   <= '1';  
                 rgb_g   <= '1';
                 rgb_b   <= '1';
                 game_en <= '0';
@@ -96,7 +96,7 @@ begin
             -- ESTADO 7: DISPARO - jugador muerto
             if state = 7 then
                 leds    <= "1111";  -- Todos los LEDs encendidos
-                rgb_r   <= '1';     -- Rojo
+                rgb_r   <= '1';     --
                 rgb_g   <= '0';
                 rgb_b   <= '0';
                 game_en <= '0';
@@ -109,13 +109,12 @@ begin
 
             -- ESTADO 8: SEGURO - jugador sobrevivió
             if state = 8 then
-                leds    <= "0000";  -- LEDs apagados
-                rgb_r   <= '0';     -- Azul
+                leds    <= "0000";  
+                rgb_r   <= '0';     
                 rgb_g   <= '0';
                 rgb_b   <= '1';
                 game_en <= '0';
 
-                -- Volver al juego con nxt
                 if nxt = '1' then
                     state   <= state - 7;  
                     game_en <= '1';

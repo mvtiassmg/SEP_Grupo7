@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr  5 14:41:01 2026" VIVADOVERSION="2020.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="GameModeSel_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Debouncer_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Debouncer_1" PORT="clk"/>
+        <CONNECTION INSTANCE="Debouncer_2" PORT="clk"/>
+        <CONNECTION INSTANCE="ClockDivider_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="undef" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Debouncer_0" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_start">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Debouncer_1" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_next" SIGIS="undef" SIGNAME="External_Ports_btn_next">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Debouncer_2" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GameModeSelection_0" PORT="sw_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="leds" RIGHT="0" SIGIS="undef" SIGNAME="GameModeSelection_0_leds_visual">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GameModeSelection_0" PORT="leds_visual"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="rgb_out" RIGHT="0" SIGIS="undef" SIGNAME="GameModeSelection_0_rgb_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GameModeSelection_0" PORT="rgb_out"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ClockDivider_0" HWVERSION="1.0" INSTANCE="ClockDivider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ClockDivider" VLNV="xilinx.com:module_ref:ClockDivider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="FREQ_IN" VALUE="125000000"/>
+        <PARAMETER NAME="FREQ_DES" VALUE="100"/>
+        <PARAMETER NAME="Component_Name" VALUE="GameModeSel_imp_ClockDivider_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_out" SIGIS="undef" SIGNAME="ClockDivider_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GameModeSelection_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Debouncer_0" HWVERSION="1.0" INSTANCE="Debouncer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debouncer" VLNV="xilinx.com:module_ref:Debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="FREQ_IN" VALUE="125000000"/>
+        <PARAMETER NAME="FREQ_DEB" VALUE="1000"/>
+        <PARAMETER NAME="DELAY" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="GameModeSel_imp_Debouncer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="btn_out" SIGIS="undef" SIGNAME="Debouncer_0_btn_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GameModeSelection_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Debouncer_1" HWVERSION="1.0" INSTANCE="Debouncer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debouncer" VLNV="xilinx.com:module_ref:Debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="FREQ_IN" VALUE="125000000"/>
+        <PARAMETER NAME="FREQ_DEB" VALUE="1000"/>
+        <PARAMETER NAME="DELAY" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="GameModeSel_imp_Debouncer_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="btn_out" SIGIS="undef" SIGNAME="Debouncer_1_btn_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GameModeSelection_0" PORT="btn_start"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Debouncer_2" HWVERSION="1.0" INSTANCE="Debouncer_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debouncer" VLNV="xilinx.com:module_ref:Debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="FREQ_IN" VALUE="125000000"/>
+        <PARAMETER NAME="FREQ_DEB" VALUE="1000"/>
+        <PARAMETER NAME="DELAY" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="GameModeSel_imp_Debouncer_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_btn_next">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_next"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="btn_out" SIGIS="undef" SIGNAME="Debouncer_2_btn_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GameModeSelection_0" PORT="btn_next"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/GameModeSelection_0" HWVERSION="1.0" INSTANCE="GameModeSelection_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GameModeSelection" VLNV="xilinx.com:module_ref:GameModeSelection:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="COLOR_IDLE" VALUE="&quot;000&quot;"/>
+        <PARAMETER NAME="COLOR_PLAYERS" VALUE="&quot;100&quot;"/>
+        <PARAMETER NAME="COLOR_BULLETS" VALUE="&quot;010&quot;"/>
+        <PARAMETER NAME="COLOR_DONE" VALUE="&quot;001&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="GameModeSel_imp_GameModeSelection_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="ClockDivider_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ClockDivider_0" PORT="clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="Debouncer_0_btn_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Debouncer_0" PORT="btn_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_start" SIGIS="undef" SIGNAME="Debouncer_1_btn_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Debouncer_1" PORT="btn_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_next" SIGIS="undef" SIGNAME="Debouncer_2_btn_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Debouncer_2" PORT="btn_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="sw_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="leds_visual" RIGHT="0" SIGIS="undef" SIGNAME="GameModeSelection_0_leds_visual">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="leds"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="rgb_out" RIGHT="0" SIGIS="undef" SIGNAME="GameModeSelection_0_rgb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rgb_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="final_players" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="final_bullets" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mode_ready" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
