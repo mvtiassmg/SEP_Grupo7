@@ -6,11 +6,11 @@ El proyeco consiste en crear una ruleta rusa usando vivado block desing. Los blo
 ## Actividades obligatorias del proyecto.
 Para aprobar el proyecto (4.0) hay que realizar las siguiente actividades obligatorioas, **como mínimo**:
 
-### A01 : Utilizar components para integrar al menos tres componentes dentro de otra entity. 
+### A01 : Utilizar components para integrar al menos tres componentes dentro de otra entity. (RGB y LEd)
 
 ### A02 : Generar al menos 3 diferentes packages en vivado block desing para incorporar sus códigos. (LISTO)
 
-### A03 : Utilizar comunicación AXI para comunicar: i) al menos un IP Core esclavo con un ATG maestro en Test mode y ii) al menos un IP Core esclavo con un ATG maestro con Advance Mode.
+### A03 : Utilizar comunicación AXI para comunicar: i) al menos un IP Core esclavo con un ATG maestro en Test mode y ii) al menos un IP Core esclavo con un ATG maestro con Advance Mode. (hacer en el ledriver)
 
 ## Actividades complementarias.
 Estas son necesarias si lo que se busca es llegar a la nota 7.0 (evidentemente lo que queremos xd).
