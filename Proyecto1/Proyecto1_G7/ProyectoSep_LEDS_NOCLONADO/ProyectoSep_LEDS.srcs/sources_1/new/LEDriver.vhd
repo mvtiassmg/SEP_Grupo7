@@ -68,30 +68,23 @@ end function;
 -- Los procedures
 
 procedure ControladorUno(
-
-    signal clk : in std_logic;
-    signal Enable : in std_logic;
-    constant maxCount : in integer;
-    signal count : inout integer;
-    signal pulseOut : out std_logic
-    
-    ) is
+    signal Enable      : in std_logic;
+    constant maxCount  : in integer;
+    signal count       : inout integer;
+    signal pulseOut    : out std_logic
+) is
 begin
-    if rising_edge(clk) then   
-        pulseOut <= '0';
-        
-        if Enable = '1' then
-            if count >= maxCount then
-                count <= 0;
-                pulseOut <= '1';
-            else
-                count <= count + 1;                
-            end if;            
+    pulseOut <= '0';
+    if Enable = '1' then
+        if count >= maxCount then
+            count <= 0;
+            pulseOut <= '1';
         else
-            count <= 0;                                        
+            count <= count + 1;
         end if;
+    else
+        count <= 0;
     end if;
-    
 end procedure;
 
 
@@ -102,53 +95,53 @@ begin
        
     process(clk)
         begin
+            if rising_edge(clk) then
             -- Animacion carga del barril jeje
-            if instr = "001" then                        
-                ControladorUno(clk, Enable, maxCount1, count, pulseEnable);                                      
-                if rising_edge(clk) then
-                    if pulseEnable = '1' then
-                        ledNumber <= (ledNumber + 1) mod 4;                     
-                    end if;                                      
-                    leds <= Barril(ledNumber);  -- Evidentemente mejor xdxdxd                                      
-                end if;   
-                
-            -- Animacion de espera
-            elsif instr = "010" then
-                ControladorUno(clk, Enable, maxCount2, count, pulseEnable);        
-                if rising_edge(clk) then
-                    if pulseEnable = '1' then
-                        ledEspera <= (ledEspera + 1) mod 5;
-                    end if;                  
-                    leds <= Espera(ledEspera);         -- Epico  
-                end if;
-            
-            -- Animacion toma de desicion P1 vs P2, se puede expandir facil
-            elsif instr = "011" then
-                ControladorUno(clk, Enable, maxCount3, count, pulseEnable);    
-                if rising_edge(clk) then
-                    if pulseEnable = '1' then
-                        ledDesicion <= (ledDesicion + 1) mod 2;
-                    end if;
-                    leds <= Desicion(ledDesicion);
-                end if;
-                
-            elsif instr = "100" then
-            
-            elsif instr = "101" then
-            
-            elsif instr = "110" then
-            
-            elsif instr = "111" then
+                if instr = "001" then                        
+                    ControladorUno(Enable, maxCount1, count, pulseEnable);                                      
+                        if pulseEnable = '1' then
+                            ledNumber <= (ledNumber + 1) mod 4;                     
+                        end if;                                      
+                        leds <= Barril(ledNumber);  -- Evidentemente mejor xdxdxd                                      
 
-            --  No es animacion, es un soft reset jeje            
-            elsif instr = "000" then            
-                if rising_edge(clk) then
-                    count <= 0;
-                    ledNumber <= 0;
-                    leds <= "0000";                   
-                end if;                                                       
-            end if;       
-                          
-        end process;
-        
+                    
+                -- Animacion de espera
+                elsif instr = "010" then
+                    ControladorUno(Enable, maxCount1, count, pulseEnable);    
+    
+                        if pulseEnable = '1' then
+                            ledEspera <= (ledEspera + 1) mod 5;
+                        end if;                  
+                        leds <= Espera(ledEspera);         -- Epico  
+
+                
+                -- Animacion toma de desicion P1 vs P2, se puede expandir facil
+                elsif instr = "011" then
+                    ControladorUno(Enable, maxCount1, count, pulseEnable); 
+    
+                        if pulseEnable = '1' then
+                            ledDesicion <= (ledDesicion + 1) mod 2;
+                        end if;
+                        leds <= Desicion(ledDesicion);
+
+                    
+                elsif instr = "100" then
+                
+                elsif instr = "101" then
+                
+                elsif instr = "110" then
+                
+                elsif instr = "111" then
+    
+                --  No es animacion, es un soft reset jeje            
+                elsif instr = "000" then            
+    
+                        count <= 0;
+                        ledNumber <= 0;
+                        leds <= "0000";
+                                                       
+                end if;       
+            end if;                      
+    end process;
+    
 end Behavioral;

@@ -11,11 +11,11 @@
     },
     "design_tree": {
       "RNGCore_0": "",
-      "Sep_SM_0": "",
       "Debouncer_0": "",
       "ClockDivider_0": "",
       "Debouncer_1": "",
-      "Debouncer_3": ""
+      "Debouncer_3": "",
+      "Sep_SM_0": ""
     },
     "ports": {
       "clk": {
@@ -114,59 +114,6 @@
             "right": "0"
           },
           "ending": {
-            "direction": "O"
-          }
-        }
-      },
-      "Sep_SM_0": {
-        "vlnv": "xilinx.com:module_ref:Sep_SM:1.0",
-        "xci_name": "Game_v1_imp_Sep_SM_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Sep_SM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              }
-            }
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "start": {
-            "direction": "I"
-          },
-          "btn_shoot": {
-            "direction": "I"
-          },
-          "magnum_status": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "leds": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "rgb_r": {
-            "direction": "O"
-          },
-          "rgb_g": {
-            "direction": "O"
-          },
-          "rgb_b": {
-            "direction": "O"
-          },
-          "shot_out": {
             "direction": "O"
           }
         }
@@ -313,6 +260,59 @@
             "direction": "I"
           },
           "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Sep_SM_0": {
+        "vlnv": "xilinx.com:module_ref:Sep_SM:1.0",
+        "xci_name": "Game_v1_imp_Sep_SM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Sep_SM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "btn_shoot": {
+            "direction": "I"
+          },
+          "magnum_status": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "leds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "rgb_r": {
+            "direction": "O"
+          },
+          "rgb_g": {
+            "direction": "O"
+          },
+          "rgb_b": {
+            "direction": "O"
+          },
+          "shot_out": {
             "direction": "O"
           }
         }

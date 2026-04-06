@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"GameModeSel_imp": {
+			"proto_instances": {
+			}
+		}
+	}
+}

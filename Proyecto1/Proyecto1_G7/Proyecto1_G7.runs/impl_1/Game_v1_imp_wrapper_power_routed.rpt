@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Sun Apr  5 18:37:53 2026
+| Date             : Mon Apr  6 09:00:17 2026
 | Host             : MS061325 running 64-bit major release  (build 9200)
 | Command          : report_power -file Game_v1_imp_wrapper_power_routed.rpt -pb Game_v1_imp_wrapper_power_summary_routed.pb -rpx Game_v1_imp_wrapper_power_routed.rpx
 | Design           : Game_v1_imp_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+---------------------------------+
-| Total On-Chip Power (W)  | 7.083 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 7.079 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                    |
 | Power Budget Margin (W)  | NA                              |
-| Dynamic (W)              | 6.646                           |
+| Dynamic (W)              | 6.642                           |
 | Device Static (W)        | 0.437                           |
 | Effective TJA (C/W)      | 11.5                            |
-| Max Ambient (C)          | 3.3                             |
-| Junction Temperature (C) | 106.7                           |
+| Max Ambient (C)          | 3.4                             |
+| Junction Temperature (C) | 106.6                           |
 | Confidence Level         | Low                             |
 | Setting File             | ---                             |
 | Simulation Activity File | ---                             |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Slice Logic    |     0.658 |      478 |       --- |             --- |
-|   LUT as Logic |     0.418 |      118 |     17600 |            0.67 |
+|   LUT as Logic |     0.418 |      117 |     17600 |            0.66 |
 |   CARRY4       |     0.115 |       57 |      4400 |            1.30 |
 |   Register     |     0.096 |      267 |     35200 |            0.76 |
 |   BUFG         |     0.029 |        5 |        32 |           15.63 |
 |   Others       |     0.000 |       18 |       --- |             --- |
-| Signals        |     0.824 |      414 |       --- |             --- |
+| Signals        |     0.820 |      414 |       --- |             --- |
 | I/O            |     5.164 |       12 |       100 |           12.00 |
 | Static Power   |     0.437 |          |           |                 |
-| Total          |     7.083 |          |           |                 |
+| Total          |     7.079 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.569 |       1.498 |      0.072 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.565 |       1.494 |      0.071 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.216 |       0.189 |      0.028 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     1.458 |       1.457 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -84,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.248 |       0.000 |      0.248 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.247 |       0.000 |      0.247 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,20 +145,20 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| Game_v1_imp_wrapper |     6.646 |
-|   Game_v1_imp_i     |     1.446 |
-|     ClockDivider_0  |     0.157 |
-|       U0            |     0.157 |
-|     Debouncer_0     |     0.378 |
-|       U0            |     0.378 |
-|     Debouncer_1     |     0.370 |
-|       U0            |     0.370 |
-|     Debouncer_3     |     0.396 |
-|       U0            |     0.396 |
-|     RNGCore_0       |     0.012 |
-|       U0            |     0.012 |
-|     Sep_SM_0        |     0.132 |
-|       U0            |     0.132 |
+| Game_v1_imp_wrapper |     6.642 |
+|   Game_v1_imp_i     |     1.440 |
+|     ClockDivider_0  |     0.158 |
+|       U0            |     0.158 |
+|     Debouncer_0     |     0.372 |
+|       U0            |     0.372 |
+|     Debouncer_1     |     0.377 |
+|       U0            |     0.377 |
+|     Debouncer_3     |     0.399 |
+|       U0            |     0.399 |
+|     RNGCore_0       |     0.013 |
+|       U0            |     0.013 |
+|     Sep_SM_0        |     0.121 |
+|       U0            |     0.121 |
 +---------------------+-----------+
 
 

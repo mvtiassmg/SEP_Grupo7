@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sun Apr  5 18:34:04 2026
+--Date        : Mon Apr  6 08:55:27 2026
 --Host        : MS061325 running 64-bit major release  (build 9200)
 --Command     : generate_target Game_v1_imp.bd
 --Design      : Game_v1_imp
@@ -42,20 +42,6 @@ architecture STRUCTURE of Game_v1_imp is
     ending : out STD_LOGIC
   );
   end component Game_v1_imp_RNGCore_0_0;
-  component Game_v1_imp_Sep_SM_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    start : in STD_LOGIC;
-    btn_shoot : in STD_LOGIC;
-    magnum_status : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb_r : out STD_LOGIC;
-    rgb_g : out STD_LOGIC;
-    rgb_b : out STD_LOGIC;
-    shot_out : out STD_LOGIC
-  );
-  end component Game_v1_imp_Sep_SM_0_0;
   component Game_v1_imp_Debouncer_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -83,6 +69,20 @@ architecture STRUCTURE of Game_v1_imp is
     btn_out : out STD_LOGIC
   );
   end component Game_v1_imp_Debouncer_0_3;
+  component Game_v1_imp_Sep_SM_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    start : in STD_LOGIC;
+    btn_shoot : in STD_LOGIC;
+    magnum_status : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb_r : out STD_LOGIC;
+    rgb_g : out STD_LOGIC;
+    rgb_b : out STD_LOGIC;
+    shot_out : out STD_LOGIC
+  );
+  end component Game_v1_imp_Sep_SM_0_0;
   signal ClockDivider_0_clk_out : STD_LOGIC;
   signal Debouncer_0_btn_out : STD_LOGIC;
   signal Debouncer_1_btn_out : STD_LOGIC;

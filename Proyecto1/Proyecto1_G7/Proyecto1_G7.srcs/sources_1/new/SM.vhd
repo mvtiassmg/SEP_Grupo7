@@ -40,7 +40,7 @@ begin
                 case state is
                     -- ESTADO 0: Esperando inicio
                     when IDLE =>
-                        leds <= "1100"; -- J1 y J2 listos
+                        leds <= "1100"; 
                         rgb_r <= '1'; rgb_g <= '1'; rgb_b <= '1'; -- Blanco
                         shot_out <= '0';
                         if start = '1' then
@@ -61,19 +61,17 @@ begin
 
                     -- ESTADO 2: Se tiró del gatillo, revisamos el bit 0
                     when EVALUAR =>
-                        shot_out <= '1'; -- Mandamos a girar el tambor para el prox turno
+                        shot_out <= '1'; 
                         if magnum_status(0) = '1' then
                             state <= MUERTE;
                         else
                             state <= SEGURO;
                         end if;
 
-                    -- ESTADO 3: Disparo seguro (AZUL)
                     when SEGURO =>
                         rgb_r <= '0'; rgb_g <= '0'; rgb_b <= '1'; -- AZUL
                         shot_out <= '0';
                         
-                        -- Pausa pequeña o esperar a soltar botón para cambiar turno
                         if btn_shoot = '0' then 
                             turno_j1 <= not turno_j1; -- Cambio de jugador
                             state <= JUGANDO;
@@ -84,7 +82,6 @@ begin
                         rgb_r <= '1'; rgb_g <= '0'; rgb_b <= '0'; -- ROJO
                         shot_out <= '0';
                         
-                        -- Los últimos dos LEDs se prenden (indicando muerte)
                         if turno_j1 = '1' then 
                             leds <= "0111"; -- Murió J1, queda J2 y aviso
                         else 
