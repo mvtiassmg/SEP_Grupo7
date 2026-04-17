@@ -125,14 +125,14 @@
         <CompFileExtendedInfo CompFileName="Game_v1_imp.bd" FileRelPathName="ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1.xci">
           <Proxy FileSetName="Game_v1_imp_Debouncer_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Game_v1_imp.bd" FileRelPathName="ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0.xci">
+          <Proxy FileSetName="Game_v1_imp_ClockDivider_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Game_v1_imp.bd" FileRelPathName="ip/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0.xci">
           <Proxy FileSetName="Game_v1_imp_Debouncer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Game_v1_imp.bd" FileRelPathName="ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3.xci">
           <Proxy FileSetName="Game_v1_imp_Debouncer_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Game_v1_imp.bd" FileRelPathName="ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0.xci">
-          <Proxy FileSetName="Game_v1_imp_ClockDivider_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd">
@@ -176,9 +176,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="GameModeSel_imp.bd" FileRelPathName="ip/GameModeSel_imp_GameModeSelection_0_0/GameModeSel_imp_GameModeSelection_0_0.xci">
-          <Proxy FileSetName="GameModeSel_imp_GameModeSelection_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="GameModeSel_imp.bd" FileRelPathName="ip/GameModeSel_imp_Debouncer_0_1_1/GameModeSel_imp_Debouncer_0_1.xci">
           <Proxy FileSetName="GameModeSel_imp_Debouncer_0_1"/>
         </CompFileExtendedInfo>
@@ -190,6 +187,9 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="GameModeSel_imp.bd" FileRelPathName="ip/GameModeSel_imp_Debouncer_0_0_1/GameModeSel_imp_Debouncer_0_0.xci">
           <Proxy FileSetName="GameModeSel_imp_Debouncer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="GameModeSel_imp.bd" FileRelPathName="ip/GameModeSel_imp_GameModeSelection_0_0/GameModeSel_imp_GameModeSelection_0_0.xci">
+          <Proxy FileSetName="GameModeSel_imp_GameModeSelection_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/GameModeSel_imp/hdl/GameModeSel_imp_wrapper.vhd">
@@ -236,9 +236,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/LEDriver.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/Ledd.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Ledd.vhd"/>
+          <Attr Name="ImportTime" Val="1776407800"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -560,9 +562,7 @@
     </Run>
     <Run Id="GameModeSel_imp_GameModeSelection_0_0_synth_1" Type="Ft3:Synth" SrcSet="GameModeSel_imp_GameModeSelection_0_0" Part="xc7z010clg400-1" ConstrsSet="GameModeSel_imp_GameModeSelection_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GameModeSel_imp_GameModeSelection_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -572,9 +572,7 @@
     </Run>
     <Run Id="Game_v1_imp_Sep_SM_0_0_synth_1" Type="Ft3:Synth" SrcSet="Game_v1_imp_Sep_SM_0_0" Part="xc7z010clg400-1" ConstrsSet="Game_v1_imp_Sep_SM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Game_v1_imp_Sep_SM_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -840,9 +838,7 @@
     </Run>
     <Run Id="GameModeSel_imp_GameModeSelection_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="GameModeSel_imp_GameModeSelection_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GameModeSel_imp_GameModeSelection_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -859,9 +855,7 @@
     </Run>
     <Run Id="Game_v1_imp_Sep_SM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Game_v1_imp_Sep_SM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Game_v1_imp_Sep_SM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

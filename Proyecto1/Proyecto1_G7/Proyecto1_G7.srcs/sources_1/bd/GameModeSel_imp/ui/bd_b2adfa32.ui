@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.028",
-   "Default View_TopLeft":"-491,0",
+   "Default View_ScaleFactor":"2.0",
+   "Default View_TopLeft":"-327,-6",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -9,14 +9,14 @@ preplace port clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
 preplace port reset -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
 preplace port start -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
 preplace port btn_next -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
-preplace portBus leds -pg 1 -lvl 3 -x 530 -y 150 -defaultsOSRD
-preplace portBus rgb_out -pg 1 -lvl 3 -x 530 -y 180 -defaultsOSRD
+preplace portBus leds -pg 1 -lvl 3 -x 550 -y 150 -defaultsOSRD
+preplace portBus rgb_out -pg 1 -lvl 3 -x 550 -y 180 -defaultsOSRD
 preplace portBus mode_sel -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
 preplace inst Debouncer_0 -pg 1 -lvl 1 -x 120 -y 170 -defaultsOSRD
 preplace inst Debouncer_1 -pg 1 -lvl 1 -x 120 -y 430 -defaultsOSRD
 preplace inst Debouncer_2 -pg 1 -lvl 1 -x 120 -y 310 -defaultsOSRD
 preplace inst ClockDivider_0 -pg 1 -lvl 1 -x 120 -y 60 -defaultsOSRD
-preplace inst GameModeSelection_0 -pg 1 -lvl 2 -x 370 -y 200 -defaultsOSRD
+preplace inst GameModeSelection_0 -pg 1 -lvl 2 -x 380 -y 200 -defaultsOSRD
 preplace netloc Debouncer_0_btn_out 1 1 1 220 170n
 preplace netloc Debouncer_1_btn_out 1 1 1 220 200n
 preplace netloc Debouncer_2_btn_out 1 1 1 230 220n
@@ -25,11 +25,11 @@ preplace netloc ClockDivider_0_clk_out 1 1 1 220 60n
 preplace netloc reset_1 1 0 1 NJ 180
 preplace netloc start_1 1 0 1 NJ 440
 preplace netloc btn_next_1 1 0 1 NJ 320
-preplace netloc GameModeSelection_0_leds_visual 1 2 1 510J 150n
+preplace netloc GameModeSelection_0_leds_visual 1 2 1 530J 150n
 preplace netloc GameModeSelection_0_rgb_out 1 2 1 NJ 180
 preplace netloc mode_sel_1 1 0 2 NJ 240 NJ
-levelinfo -pg 1 0 120 370 530
-pagesize -pg 1 -db -bbox -sgen -140 0 660 500
+levelinfo -pg 1 0 120 380 550
+pagesize -pg 1 -db -bbox -sgen -150 0 690 500
 "
 }
 0

@@ -4,7 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity GameModeSelection is
     Generic (
-        -- Parámetros genéricos para colores RGB (R-G-B)
         COLOR_IDLE     : std_logic_vector(2 downto 0) := "000"; -- Apagado
         COLOR_PLAYERS  : std_logic_vector(2 downto 0) := "100"; -- Rojo
         COLOR_BULLETS  : std_logic_vector(2 downto 0) := "010"; -- Verde
@@ -28,7 +27,6 @@ end GameModeSelection;
 
 architecture Structural of GameModeSelection is
 
-    -- Señales de control de la SM
     signal en_sel_p        : std_logic;
     signal en_sel_b        : std_logic;
     signal sig_mode_ready  : std_logic; 
