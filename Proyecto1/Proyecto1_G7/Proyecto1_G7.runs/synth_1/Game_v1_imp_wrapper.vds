@@ -2,17 +2,18 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Apr 17 08:43:54 2026
-# Process ID: 5712
-# Current directory: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1
+# Start of session at: Sun Apr 19 23:58:23 2026
+# Process ID: 46348
+# Current directory: C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1
 # Command line: vivado.exe -log Game_v1_imp_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Game_v1_imp_wrapper.tcl
-# Log file: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/Game_v1_imp_wrapper.vds
-# Journal file: D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1\vivado.jou
+# Log file: C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/Game_v1_imp_wrapper.vds
+# Journal file: C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Game_v1_imp_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_1/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx2/Vivado/2020.1/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1059.953 ; gain = 0.000
 Command: synth_design -top Game_v1_imp_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -20,82 +21,86 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34268
+INFO: [Synth 8-7075] Helper process launched with PID 9264
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1059.953 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_wrapper' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd:28]
-INFO: [Synth 8-3491] module 'Game_v1_imp' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:14' bound to instance 'Game_v1_imp_i' of component 'Game_v1_imp' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:32]
-INFO: [Synth 8-3491] module 'Game_v1_imp_ClockDivider_0_0' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_ClockDivider_0_0_stub.vhdl:5' bound to instance 'ClockDivider_0' of component 'Game_v1_imp_ClockDivider_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:117]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_ClockDivider_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_ClockDivider_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'Game_v1_imp_Debouncer_0_0' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Debouncer_0_0_stub.vhdl:5' bound to instance 'Debouncer_0' of component 'Game_v1_imp_Debouncer_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:122]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Debouncer_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Debouncer_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'Game_v1_imp_Debouncer_0_1' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Debouncer_0_1_stub.vhdl:5' bound to instance 'Debouncer_1' of component 'Game_v1_imp_Debouncer_0_1' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:128]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Debouncer_0_1' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Debouncer_0_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'Game_v1_imp_Debouncer_0_3' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Debouncer_0_3_stub.vhdl:5' bound to instance 'Debouncer_3' of component 'Game_v1_imp_Debouncer_0_3' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:134]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Debouncer_0_3' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Debouncer_0_3_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'Game_v1_imp_RNGCore_0_0' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_RNGCore_0_0_stub.vhdl:5' bound to instance 'RNGCore_0' of component 'Game_v1_imp_RNGCore_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:140]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_RNGCore_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_RNGCore_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'Game_v1_imp_Sep_SM_0_0' declared at 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Sep_SM_0_0_stub.vhdl:5' bound to instance 'Sep_SM_0' of component 'Game_v1_imp_Sep_SM_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:151]
-INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Sep_SM_0_0' [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-5712-MS061325/realtime/Game_v1_imp_Sep_SM_0_0_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'Game_v1_imp' (1#1) [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'Game_v1_imp_wrapper' (2#1) [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_wrapper' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd:29]
+INFO: [Synth 8-3491] module 'Game_v1_imp' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:14' bound to instance 'Game_v1_imp_i' of component 'Game_v1_imp' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:33]
+INFO: [Synth 8-3491] module 'Game_v1_imp_ClockDivider_0_0' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_ClockDivider_0_0_stub.vhdl:5' bound to instance 'ClockDivider_0' of component 'Game_v1_imp_ClockDivider_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_ClockDivider_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_ClockDivider_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Game_v1_imp_Debouncer_0_0' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Debouncer_0_0_stub.vhdl:5' bound to instance 'Debouncer_0' of component 'Game_v1_imp_Debouncer_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Debouncer_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Debouncer_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'Game_v1_imp_Debouncer_0_1' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Debouncer_0_1_stub.vhdl:5' bound to instance 'Debouncer_1' of component 'Game_v1_imp_Debouncer_0_1' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Debouncer_0_1' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Debouncer_0_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'Game_v1_imp_Debouncer_0_3' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Debouncer_0_3_stub.vhdl:5' bound to instance 'Debouncer_3' of component 'Game_v1_imp_Debouncer_0_3' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Debouncer_0_3' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Debouncer_0_3_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'Game_v1_imp_LEDriverONE_0_0' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_LEDriverONE_0_0_stub.vhdl:5' bound to instance 'LEDriverONE_0' of component 'Game_v1_imp_LEDriverONE_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_LEDriverONE_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_LEDriverONE_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Game_v1_imp_RNGCore_0_0' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_RNGCore_0_0_stub.vhdl:5' bound to instance 'RNGCore_0' of component 'Game_v1_imp_RNGCore_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_RNGCore_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_RNGCore_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Game_v1_imp_Sep_SM_0_0' declared at 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Sep_SM_0_0_stub.vhdl:5' bound to instance 'Sep_SM_0' of component 'Game_v1_imp_Sep_SM_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'Game_v1_imp_Sep_SM_0_0' [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/.Xil/Vivado-46348-Mazzi/realtime/Game_v1_imp_Sep_SM_0_0_stub.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'Game_v1_imp' (1#1) [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/synth/Game_v1_imp.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Game_v1_imp_wrapper' (2#1) [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/hdl/Game_v1_imp_wrapper.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1059.953 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1059.953 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1059.953 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1059.953 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0_in_context.xdc] for cell 'Game_v1_imp_i/RNGCore_0'
-Finished Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0_in_context.xdc] for cell 'Game_v1_imp_i/RNGCore_0'
-Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Sep_SM_0'
-Finished Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Sep_SM_0'
-Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_0'
-Finished Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_0'
-Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0_in_context.xdc] for cell 'Game_v1_imp_i/ClockDivider_0'
-Finished Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0_in_context.xdc] for cell 'Game_v1_imp_i/ClockDivider_0'
-Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_1'
-Finished Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_1'
-Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_3'
-Finished Parsing XDC File [d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_3'
-Parsing XDC File [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'mode_sel[0]'. [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc:13]
-WARNING: [Vivado 12-584] No ports matched 'mode_sel[1]'. [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'start'. [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc:20]
-Finished Parsing XDC File [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Game_v1_imp_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Game_v1_imp_wrapper_propImpl.xdc].
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0_in_context.xdc] for cell 'Game_v1_imp_i/RNGCore_0'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0/Game_v1_imp_RNGCore_0_0_in_context.xdc] for cell 'Game_v1_imp_i/RNGCore_0'
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Sep_SM_0'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Sep_SM_0'
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_0'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0/Game_v1_imp_Debouncer_0_0_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_0'
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0_in_context.xdc] for cell 'Game_v1_imp_i/ClockDivider_0'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0/Game_v1_imp_ClockDivider_0_0_in_context.xdc] for cell 'Game_v1_imp_i/ClockDivider_0'
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_1'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_1'
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_3'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3_in_context.xdc] for cell 'Game_v1_imp_i/Debouncer_3'
+Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_LEDriverONE_0_0/Game_v1_imp_LEDriverONE_0_0/Game_v1_imp_LEDriverONE_0_0_in_context.xdc] for cell 'Game_v1_imp_i/LEDriverONE_0'
+Finished Parsing XDC File [c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_LEDriverONE_0_0/Game_v1_imp_LEDriverONE_0_0/Game_v1_imp_LEDriverONE_0_0_in_context.xdc] for cell 'Game_v1_imp_i/LEDriverONE_0'
+Parsing XDC File [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'mode_sel[0]'. [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'mode_sel[1]'. [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'start'. [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc:20]
+Finished Parsing XDC File [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Game_v1_imp_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Game_v1_imp_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Game_v1_imp_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1076.133 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1076.133 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1076.133 ; gain = 16.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1076.133 ; gain = 16.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -107,11 +112,12 @@ Applied set_property DONT_TOUCH = true for Game_v1_imp_i/Debouncer_0. (constrain
 Applied set_property DONT_TOUCH = true for Game_v1_imp_i/ClockDivider_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Game_v1_imp_i/Debouncer_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Game_v1_imp_i/Debouncer_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Game_v1_imp_i/LEDriverONE_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1076.133 ; gain = 16.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1076.133 ; gain = 16.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -133,25 +139,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1076.691 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1076.133 ; gain = 16.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1110.152 ; gain = 33.461
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1114.621 ; gain = 54.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1110.152 ; gain = 33.461
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1114.621 ; gain = 54.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1129.262 ; gain = 52.570
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1133.727 ; gain = 73.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -169,37 +175,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -213,8 +219,9 @@ Report BlackBoxes:
 |2     |Game_v1_imp_Debouncer_0_0    |         1|
 |3     |Game_v1_imp_Debouncer_0_1    |         1|
 |4     |Game_v1_imp_Debouncer_0_3    |         1|
-|5     |Game_v1_imp_RNGCore_0_0      |         1|
-|6     |Game_v1_imp_Sep_SM_0_0       |         1|
+|5     |Game_v1_imp_LEDriverONE_0_0  |         1|
+|6     |Game_v1_imp_RNGCore_0_0      |         1|
+|7     |Game_v1_imp_Sep_SM_0_0       |         1|
 +------+-----------------------------+----------+
 
 Report Cell Usage: 
@@ -225,29 +232,30 @@ Report Cell Usage:
 |2     |Game_v1_imp_Debouncer_0_0_bbox    |     1|
 |3     |Game_v1_imp_Debouncer_0_1_bbox    |     1|
 |4     |Game_v1_imp_Debouncer_0_3_bbox    |     1|
-|5     |Game_v1_imp_RNGCore_0_0_bbox      |     1|
-|6     |Game_v1_imp_Sep_SM_0_0_bbox       |     1|
-|7     |IBUF                              |     5|
-|8     |OBUF                              |     7|
+|5     |Game_v1_imp_LEDriverONE_0_0_bbox  |     1|
+|6     |Game_v1_imp_RNGCore_0_0_bbox      |     1|
+|7     |Game_v1_imp_Sep_SM_0_0_bbox       |     1|
+|8     |IBUF                              |     6|
+|9     |OBUF                              |     7|
 +------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1139.520 ; gain = 79.566
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1134.023 ; gain = 57.332
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.023 ; gain = 57.332
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.520 ; gain = 63.387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1139.520 ; gain = 79.566
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1146.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.520 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.422 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+35 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1151.082 ; gain = 74.391
-INFO: [Common 17-1381] The checkpoint 'D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/Game_v1_imp_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1157.422 ; gain = 97.469
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/Game_v1_imp_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Game_v1_imp_wrapper_utilization_synth.rpt -pb Game_v1_imp_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 17 08:44:28 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 19 23:59:22 2026...

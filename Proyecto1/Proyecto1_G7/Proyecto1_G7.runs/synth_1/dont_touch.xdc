@@ -24,4 +24,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_Deb
 # IP: bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_Debouncer_0_3 || ORIG_REF_NAME==Game_v1_imp_Debouncer_0_3} -quiet] -quiet
 
+# IP: bd/Game_v1_imp/ip/Game_v1_imp_LEDriverONE_0_0/Game_v1_imp_LEDriverONE_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Game_v1_imp_LEDriverONE_0_0 || ORIG_REF_NAME==Game_v1_imp_LEDriverONE_0_0} -quiet] -quiet
+
 # XDC: bd/Game_v1_imp/Game_v1_imp_ooc.xdc

@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="Game_v1_imp" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1775480128"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1775480128"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1775480128"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1775480128"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1776657426"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1776657426"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1776657426"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1776657426"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Game_v1_imp_RNGCore_0_0\Game_v1_imp_RNGCore_0_0.xci" Type="IP">
         <Instance HierarchyPath="RNGCore_0"/>
@@ -49,6 +49,14 @@
       </File>
       <File Name="ip\Game_v1_imp_Debouncer_0_3\Game_v1_imp_Debouncer_0_3.xci" Type="IP">
         <Instance HierarchyPath="Debouncer_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Game_v1_imp_LEDriverONE_0_0\Game_v1_imp_LEDriverONE_0_0.xci" Type="IP">
+        <Instance HierarchyPath="LEDriverONE_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

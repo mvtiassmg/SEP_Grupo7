@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sun Apr  5 18:34:56 2026
-// Host        : MS061325 running 64-bit major release  (build 9200)
+// Date        : Fri Apr 17 09:03:23 2026
+// Host        : Mazzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3_stub.v
+//               c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3_stub.v
 // Design      : Game_v1_imp_Debouncer_0_3
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

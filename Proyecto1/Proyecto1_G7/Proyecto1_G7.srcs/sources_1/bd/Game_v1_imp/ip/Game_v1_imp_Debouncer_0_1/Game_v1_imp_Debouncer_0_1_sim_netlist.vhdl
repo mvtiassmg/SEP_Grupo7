@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sun Apr  5 18:34:55 2026
--- Host        : MS061325 running 64-bit major release  (build 9200)
+-- Date        : Fri Apr 17 09:03:23 2026
+-- Host        : Mazzi running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1_sim_netlist.vhdl
+--               c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_1/Game_v1_imp_Debouncer_0_1_sim_netlist.vhdl
 -- Design      : Game_v1_imp_Debouncer_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

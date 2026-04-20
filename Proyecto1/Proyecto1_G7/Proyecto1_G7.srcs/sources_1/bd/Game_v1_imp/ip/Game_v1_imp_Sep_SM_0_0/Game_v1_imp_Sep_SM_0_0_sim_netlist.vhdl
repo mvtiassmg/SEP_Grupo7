@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Mon Apr  6 08:56:18 2026
--- Host        : MS061325 running 64-bit major release  (build 9200)
+-- Date        : Sat Apr 18 10:55:38 2026
+-- Host        : Mazzi running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_sim_netlist.vhdl
+--               c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_sim_netlist.vhdl
 -- Design      : Game_v1_imp_Sep_SM_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity Game_v1_imp_Sep_SM_0_0_Sep_SM is
   port (
-    leds : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    instr_ld : out STD_LOGIC_VECTOR ( 2 downto 0 );
     shot_out : out STD_LOGIC;
     rgb_g : out STD_LOGIC;
     rgb_b : out STD_LOGIC;
@@ -38,10 +38,10 @@ architecture STRUCTURE of Game_v1_imp_Sep_SM_0_0_Sep_SM is
   signal \__0/i__n_0\ : STD_LOGIC;
   signal btn_prev : STD_LOGIC;
   signal btn_prev_i_1_n_0 : STD_LOGIC;
-  signal \^leds\ : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal \leds[1]_i_1_n_0\ : STD_LOGIC;
-  signal \leds[2]_i_1_n_0\ : STD_LOGIC;
-  signal \leds[3]_i_1_n_0\ : STD_LOGIC;
+  signal \^instr_ld\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \instr_ld[0]_i_1_n_0\ : STD_LOGIC;
+  signal \instr_ld[1]_i_1_n_0\ : STD_LOGIC;
+  signal \instr_ld[2]_i_1_n_0\ : STD_LOGIC;
   signal \^rgb_b\ : STD_LOGIC;
   signal rgb_b_i_1_n_0 : STD_LOGIC;
   signal \^rgb_g\ : STD_LOGIC;
@@ -55,52 +55,51 @@ architecture STRUCTURE of Game_v1_imp_Sep_SM_0_0_Sep_SM is
   signal turno_j1_i_2_n_0 : STD_LOGIC;
   signal turno_j1_reg_n_0 : STD_LOGIC;
   attribute FSM_ENCODED_STATES : string;
-  attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[0]\ : label is "idle:000,jugando:001,evaluar:010,seguro:100,muerte:011";
-  attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[1]\ : label is "idle:000,jugando:001,evaluar:010,seguro:100,muerte:011";
-  attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[2]\ : label is "idle:000,jugando:001,evaluar:010,seguro:100,muerte:011";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[0]\ : label is "idle:000,jugando:001,ledcero:010,preevaluar:011,evaluar:100,seguro:110,muerte:101";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[1]\ : label is "idle:000,jugando:001,ledcero:010,preevaluar:011,evaluar:100,seguro:110,muerte:101";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[2]\ : label is "idle:000,jugando:001,ledcero:010,preevaluar:011,evaluar:100,seguro:110,muerte:101";
 begin
-  leds(2 downto 0) <= \^leds\(2 downto 0);
+  instr_ld(2 downto 0) <= \^instr_ld\(2 downto 0);
   rgb_b <= \^rgb_b\;
   rgb_g <= \^rgb_g\;
   rgb_r <= \^rgb_r\;
   shot_out <= \^shot_out\;
 \FSM_sequential_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000026266626"
+      INIT => X"0000000066666626"
     )
         port map (
       I0 => state(0),
       I1 => \__0/i__n_0\,
-      I2 => state(1),
-      I3 => magnum_status(0),
-      I4 => state(2),
+      I2 => state(2),
+      I3 => state(1),
+      I4 => magnum_status(0),
       I5 => reset,
       O => \FSM_sequential_state[0]_i_1_n_0\
     );
 \FSM_sequential_state[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000022226A62"
+      INIT => X"00000000226626AA"
     )
         port map (
       I0 => state(1),
       I1 => \__0/i__n_0\,
-      I2 => state(0),
-      I3 => magnum_status(0),
-      I4 => state(2),
+      I2 => magnum_status(0),
+      I3 => state(2),
+      I4 => state(0),
       I5 => reset,
       O => \FSM_sequential_state[1]_i_1_n_0\
     );
-\FSM_sequential_state[2]_i_1\: unisim.vcomponents.LUT6
+\FSM_sequential_state[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000022222622"
+      INIT => X"0000622A"
     )
         port map (
       I0 => state(2),
       I1 => \__0/i__n_0\,
-      I2 => magnum_status(0),
-      I3 => state(1),
-      I4 => state(0),
-      I5 => reset,
+      I2 => state(1),
+      I3 => state(0),
+      I4 => reset,
       O => \FSM_sequential_state[2]_i_1_n_0\
     );
 \FSM_sequential_state_reg[0]\: unisim.vcomponents.FDRE
@@ -138,14 +137,14 @@ begin
     );
 \__0/i_\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4054405E4554405E"
+      INIT => X"00C077FC22E277FC"
     )
         port map (
-      I0 => state(2),
-      I1 => start,
-      I2 => state(1),
-      I3 => state(0),
-      I4 => btn_shoot,
+      I0 => btn_shoot,
+      I1 => state(2),
+      I2 => start,
+      I3 => state(1),
+      I4 => state(0),
       I5 => btn_prev,
       O => \__0/i__n_0\
     );
@@ -169,77 +168,77 @@ btn_prev_reg: unisim.vcomponents.FDRE
       Q => btn_prev,
       R => '0'
     );
-\leds[1]_i_1\: unisim.vcomponents.LUT5
+\instr_ld[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFA0008"
+      INIT => X"FFFFF09300003093"
     )
         port map (
-      I0 => state(1),
+      I0 => turno_j1_reg_n_0,
+      I1 => state(2),
+      I2 => state(0),
+      I3 => state(1),
+      I4 => reset,
+      I5 => \^instr_ld\(0),
+      O => \instr_ld[0]_i_1_n_0\
+    );
+\instr_ld[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFC07300000073"
+    )
+        port map (
+      I0 => turno_j1_reg_n_0,
+      I1 => state(2),
+      I2 => state(0),
+      I3 => state(1),
+      I4 => reset,
+      I5 => \^instr_ld\(1),
+      O => \instr_ld[1]_i_1_n_0\
+    );
+\instr_ld[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FF890009"
+    )
+        port map (
+      I0 => state(2),
       I1 => state(0),
-      I2 => state(2),
+      I2 => state(1),
       I3 => reset,
-      I4 => \^leds\(0),
-      O => \leds[1]_i_1_n_0\
+      I4 => \^instr_ld\(2),
+      O => \instr_ld[2]_i_1_n_0\
     );
-\leds[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF9F00000093"
-    )
-        port map (
-      I0 => turno_j1_reg_n_0,
-      I1 => state(1),
-      I2 => state(0),
-      I3 => state(2),
-      I4 => reset,
-      I5 => \^leds\(1),
-      O => \leds[2]_i_1_n_0\
-    );
-\leds[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF6F00000063"
-    )
-        port map (
-      I0 => turno_j1_reg_n_0,
-      I1 => state(1),
-      I2 => state(0),
-      I3 => state(2),
-      I4 => reset,
-      I5 => \^leds\(2),
-      O => \leds[3]_i_1_n_0\
-    );
-\leds_reg[1]\: unisim.vcomponents.FDRE
+\instr_ld_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[1]_i_1_n_0\,
-      Q => \^leds\(0),
+      D => \instr_ld[0]_i_1_n_0\,
+      Q => \^instr_ld\(0),
       R => '0'
     );
-\leds_reg[2]\: unisim.vcomponents.FDRE
+\instr_ld_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[2]_i_1_n_0\,
-      Q => \^leds\(1),
+      D => \instr_ld[1]_i_1_n_0\,
+      Q => \^instr_ld\(1),
       R => '0'
     );
-\leds_reg[3]\: unisim.vcomponents.FDRE
+\instr_ld_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[3]_i_1_n_0\,
-      Q => \^leds\(2),
+      D => \instr_ld[2]_i_1_n_0\,
+      Q => \^instr_ld\(2),
       R => '0'
     );
 rgb_b_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFAF0101"
+      INIT => X"FAFF0041"
     )
         port map (
       I0 => reset,
-      I1 => state(1),
-      I2 => state(0),
-      I3 => state(2),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => state(0),
       I4 => \^rgb_b\,
       O => rgb_b_i_1_n_0
     );
@@ -253,13 +252,13 @@ rgb_b_reg: unisim.vcomponents.FDRE
     );
 rgb_g_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FEBF0011"
+      INIT => X"FBBF0101"
     )
         port map (
       I0 => reset,
-      I1 => state(1),
-      I2 => state(0),
-      I3 => state(2),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => state(0),
       I4 => \^rgb_g\,
       O => rgb_g_i_1_n_0
     );
@@ -273,13 +272,13 @@ rgb_g_reg: unisim.vcomponents.FDRE
     );
 rgb_r_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FEEF0041"
+      INIT => X"FEBF0401"
     )
         port map (
       I0 => reset,
-      I1 => state(1),
-      I2 => state(0),
-      I3 => state(2),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => state(0),
       I4 => \^rgb_r\,
       O => rgb_r_i_1_n_0
     );
@@ -293,11 +292,11 @@ rgb_r_reg: unisim.vcomponents.FDRE
     );
 shot_out_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFB80010"
+      INIT => X"FFB40004"
     )
         port map (
-      I0 => state(2),
-      I1 => state(0),
+      I0 => state(0),
+      I1 => state(2),
       I2 => state(1),
       I3 => reset,
       I4 => \^shot_out\,
@@ -311,27 +310,26 @@ shot_out_reg: unisim.vcomponents.FDRE
       Q => \^shot_out\,
       R => '0'
     );
-turno_j1_i_1: unisim.vcomponents.LUT6
+turno_j1_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"4444FFFF444F0000"
+      INIT => X"30FF7500"
     )
         port map (
-      I0 => state(2),
-      I1 => start,
-      I2 => state(1),
-      I3 => state(0),
-      I4 => turno_j1_i_2_n_0,
-      I5 => turno_j1_reg_n_0,
+      I0 => state(0),
+      I1 => state(1),
+      I2 => start,
+      I3 => turno_j1_i_2_n_0,
+      I4 => turno_j1_reg_n_0,
       O => turno_j1_i_1_n_0
     );
 turno_j1_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000030040004"
+      INIT => X"0000000050200020"
     )
         port map (
-      I0 => btn_shoot,
-      I1 => state(2),
-      I2 => state(1),
+      I0 => state(1),
+      I1 => btn_shoot,
+      I2 => state(2),
       I3 => state(0),
       I4 => start,
       I5 => reset,
@@ -360,11 +358,12 @@ entity Game_v1_imp_Sep_SM_0_0 is
     start : in STD_LOGIC;
     btn_shoot : in STD_LOGIC;
     magnum_status : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
     rgb_r : out STD_LOGIC;
     rgb_g : out STD_LOGIC;
     rgb_b : out STD_LOGIC;
-    shot_out : out STD_LOGIC
+    shot_out : out STD_LOGIC;
+    instr_ld : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    enable_ld : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Game_v1_imp_Sep_SM_0_0 : entity is true;
@@ -379,7 +378,7 @@ entity Game_v1_imp_Sep_SM_0_0 is
 end Game_v1_imp_Sep_SM_0_0;
 
 architecture STRUCTURE of Game_v1_imp_Sep_SM_0_0 is
-  signal \^leds\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \<const1>\ : STD_LOGIC;
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
@@ -387,15 +386,12 @@ architecture STRUCTURE of Game_v1_imp_Sep_SM_0_0 is
   attribute x_interface_info of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
   attribute x_interface_parameter of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-  leds(3 downto 2) <= \^leds\(3 downto 2);
-  leds(1) <= \^leds\(0);
-  leds(0) <= \^leds\(0);
+  enable_ld <= \<const1>\;
 U0: entity work.Game_v1_imp_Sep_SM_0_0_Sep_SM
      port map (
       btn_shoot => btn_shoot,
       clk => clk,
-      leds(2 downto 1) => \^leds\(3 downto 2),
-      leds(0) => \^leds\(0),
+      instr_ld(2 downto 0) => instr_ld(2 downto 0),
       magnum_status(0) => magnum_status(0),
       reset => reset,
       rgb_b => rgb_b,
@@ -403,5 +399,9 @@ U0: entity work.Game_v1_imp_Sep_SM_0_0_Sep_SM
       rgb_r => rgb_r,
       shot_out => shot_out,
       start => start
+    );
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
     );
 end STRUCTURE;

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7AAC342F415222B3",
+      "boundary_crc": "0x62B7B40D0BF8FF1B",
       "device": "xc7z010clg400-1",
       "name": "Game_v1_imp",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -15,7 +15,8 @@
       "ClockDivider_0": "",
       "Debouncer_1": "",
       "Debouncer_3": "",
-      "Sep_SM_0": ""
+      "Sep_SM_0": "",
+      "LEDriverONE_0": ""
     },
     "ports": {
       "clk": {
@@ -46,11 +47,6 @@
       "enable": {
         "direction": "I"
       },
-      "leds": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
-      },
       "rgb_r": {
         "direction": "O"
       },
@@ -67,6 +63,14 @@
         "direction": "I"
       },
       "shoot": {
+        "direction": "I"
+      },
+      "leds": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "EnableLed": {
         "direction": "I"
       }
     },
@@ -298,11 +302,6 @@
             "left": "7",
             "right": "0"
           },
-          "leds": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
           "rgb_r": {
             "direction": "O"
           },
@@ -314,6 +313,52 @@
           },
           "shot_out": {
             "direction": "O"
+          },
+          "instr_ld": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "enable_ld": {
+            "direction": "O"
+          }
+        }
+      },
+      "LEDriverONE_0": {
+        "vlnv": "xilinx.com:module_ref:LEDriverONE:1.0",
+        "xci_name": "Game_v1_imp_LEDriverONE_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LEDriverONE",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Game_v1_imp_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "Enable_led": {
+            "direction": "I"
+          },
+          "instr": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "leds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
           }
         }
       }
@@ -350,13 +395,6 @@
           "Sep_SM_0/start"
         ]
       },
-      "ClockDivider_0_clk_out": {
-        "ports": [
-          "ClockDivider_0/clk_out",
-          "RNGCore_0/clk",
-          "Sep_SM_0/clk"
-        ]
-      },
       "Sep_SM_0_shot_out": {
         "ports": [
           "Sep_SM_0/shot_out",
@@ -366,22 +404,17 @@
       "clk_1": {
         "ports": [
           "clk",
-          "ClockDivider_0/clk",
           "Debouncer_0/clk",
+          "ClockDivider_0/clk",
           "Debouncer_1/clk",
-          "Debouncer_3/clk"
+          "Debouncer_3/clk",
+          "LEDriverONE_0/clk"
         ]
       },
       "enable_1": {
         "ports": [
           "enable",
           "RNGCore_0/enable"
-        ]
-      },
-      "Sep_SM_0_leds": {
-        "ports": [
-          "Sep_SM_0/leds",
-          "leds"
         ]
       },
       "Sep_SM_0_rgb_r": {
@@ -418,6 +451,31 @@
         "ports": [
           "shoot",
           "Debouncer_3/btn"
+        ]
+      },
+      "Sep_SM_0_instr_ld": {
+        "ports": [
+          "Sep_SM_0/instr_ld",
+          "LEDriverONE_0/instr"
+        ]
+      },
+      "LEDriverONE_0_leds": {
+        "ports": [
+          "LEDriverONE_0/leds",
+          "leds"
+        ]
+      },
+      "ClockDivider_0_clk_out": {
+        "ports": [
+          "ClockDivider_0/clk_out",
+          "RNGCore_0/clk",
+          "Sep_SM_0/clk"
+        ]
+      },
+      "Enable_led_0_1": {
+        "ports": [
+          "EnableLed",
+          "LEDriverONE_0/Enable_led"
         ]
       }
     }

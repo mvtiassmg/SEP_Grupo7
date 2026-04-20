@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/Game_v1_imp_wrapper.tcl"
+  variable script "C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/impl_1/Game_v1_imp_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -121,7 +121,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 5
+  set_param chipscope.maxJobs 4
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
@@ -129,19 +129,19 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/wt [current_project]
-  set_property parent.project_path D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.xpr [current_project]
-  set_property ip_output_repo D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/wt [current_project]
+  set_property parent.project_path C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.xpr [current_project]
+  set_property ip_output_repo C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/Game_v1_imp_wrapper.dcp
+  add_files -quiet C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.runs/synth_1/Game_v1_imp_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/Game_v1_imp.bd
+  add_files C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/Game_v1_imp.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc
+  read_xdc C:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/constrs_1/imports/SEP/Zybo-Z7-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

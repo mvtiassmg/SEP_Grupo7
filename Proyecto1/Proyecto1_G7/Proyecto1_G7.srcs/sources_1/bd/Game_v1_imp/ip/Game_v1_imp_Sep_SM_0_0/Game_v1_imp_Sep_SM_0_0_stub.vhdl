@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Mon Apr  6 08:56:18 2026
--- Host        : MS061325 running 64-bit major release  (build 9200)
+-- Date        : Sat Apr 18 10:55:38 2026
+-- Host        : Mazzi running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_stub.vhdl
+--               c:/Users/mazzi/OneDrive/Escritorio/sepG7/2/SEP_Grupo7/Proyecto1/Proyecto1_G7/Proyecto1_G7.srcs/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Sep_SM_0_0/Game_v1_imp_Sep_SM_0_0_stub.vhdl
 -- Design      : Game_v1_imp_Sep_SM_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1
@@ -19,11 +19,12 @@ entity Game_v1_imp_Sep_SM_0_0 is
     start : in STD_LOGIC;
     btn_shoot : in STD_LOGIC;
     magnum_status : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
     rgb_r : out STD_LOGIC;
     rgb_g : out STD_LOGIC;
     rgb_b : out STD_LOGIC;
-    shot_out : out STD_LOGIC
+    shot_out : out STD_LOGIC;
+    instr_ld : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    enable_ld : out STD_LOGIC
   );
 
 end Game_v1_imp_Sep_SM_0_0;
@@ -32,7 +33,7 @@ architecture stub of Game_v1_imp_Sep_SM_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,reset,start,btn_shoot,magnum_status[7:0],leds[3:0],rgb_r,rgb_g,rgb_b,shot_out";
+attribute black_box_pad_pin of stub : architecture is "clk,reset,start,btn_shoot,magnum_status[7:0],rgb_r,rgb_g,rgb_b,shot_out,instr_ld[2:0],enable_ld";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "Sep_SM,Vivado 2020.1";
 begin

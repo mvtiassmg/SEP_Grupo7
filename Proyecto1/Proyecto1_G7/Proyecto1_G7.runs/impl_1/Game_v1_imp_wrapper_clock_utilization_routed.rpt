@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Apr 17 08:45:34 2026
-| Host         : MS061325 running 64-bit major release  (build 9200)
+| Date         : Mon Apr 20 00:00:30 2026
+| Host         : Mazzi running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file Game_v1_imp_wrapper_clock_utilization_routed.rpt
 | Design       : Game_v1_imp_wrapper
 | Device       : 7z010-clg400
@@ -51,10 +51,10 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------+------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                              | Net                                                              |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------+------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |         132 |               0 |              |       | clk_IBUF_BUFG_inst/O                                                    | clk_IBUF_BUFG                                                    |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |         182 |               0 |              |       | clk_IBUF_BUFG_inst/O                                                    | clk_IBUF_BUFG                                                    |
 | g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 2 |          34 |               1 |              |       | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg_0_BUFG_inst/O | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |          34 |               1 |              |       | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0_BUFG_inst/O | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
-| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |          34 |               1 |              |       | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG_inst/O | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
+| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 1 |          34 |               1 |              |       | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG_inst/O | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
 | g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 2 |          33 |               1 |              |       | Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG_inst/O                     | Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG                     |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------+------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -68,10 +68,10 @@ Table of Contents
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                  | Net                                                         |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------+-------------------------------------------------------------+
 | src0      | g0        | IBUF/O          | IOB_X0Y76  | IOB_X0Y76    | X1Y1         |           1 |               0 |                     |              | clk_IBUF_inst/O                                             | clk_IBUF                                                    |
-| src1      | g1        | FDRE/Q          | None       | SLICE_X20Y46 | X0Y0         |           1 |               0 |                     |              | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg/Q | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg_0 |
-| src2      | g2        | FDRE/Q          | None       | SLICE_X23Y46 | X1Y0         |           1 |               0 |                     |              | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg/Q | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0 |
-| src3      | g3        | FDRE/Q          | None       | SLICE_X25Y46 | X1Y0         |           1 |               0 |                     |              | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg/Q | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0 |
-| src4      | g4        | FDRE/Q          | None       | SLICE_X18Y46 | X0Y0         |           1 |               0 |                     |              | Game_v1_imp_i/ClockDivider_0/U0/clk_out_reg_reg/Q           | Game_v1_imp_i/ClockDivider_0/U0/clk_out                     |
+| src1      | g1        | FDRE/Q          | None       | SLICE_X21Y46 | X0Y0         |           1 |               0 |                     |              | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg/Q | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg_0 |
+| src2      | g2        | FDRE/Q          | None       | SLICE_X25Y46 | X1Y0         |           1 |               0 |                     |              | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg/Q | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0 |
+| src3      | g3        | FDRE/Q          | None       | SLICE_X22Y45 | X1Y0         |           1 |               0 |                     |              | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg/Q | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0 |
+| src4      | g4        | FDRE/Q          | None       | SLICE_X16Y46 | X0Y0         |           1 |               0 |                     |              | Game_v1_imp_i/ClockDivider_0/U0/clk_out_reg_reg/Q           | Game_v1_imp_i/ClockDivider_0/U0/clk_out                     |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------+-------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -85,10 +85,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |   60 |  1100 |    3 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  117 |  1100 |   31 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    6 |  1100 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   84 |  1100 |    4 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y0              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |   60 |  1100 |   31 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  188 |  1100 |   50 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    6 |  1100 |    3 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   63 |  1100 |   43 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -100,8 +100,8 @@ All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
-| Y1 |  1 |  4 |
-| Y0 |  3 |  4 |
+| Y1 |  1 |  2 |
+| Y0 |  3 |  5 |
 +----+----+----+
 
 
@@ -111,7 +111,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net           |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
-| g0        | BUFG/O          | n/a               |       |             |               |         132 |        0 |              0 |        0 | clk_IBUF_BUFG |
+| g0        | BUFG/O          | n/a               |       |             |               |         182 |        0 |              0 |        0 | clk_IBUF_BUFG |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -122,8 +122,8 @@ All Modules
 +----+-----+-----+
 |    | X0  | X1  |
 +----+-----+-----+
-| Y1 |   6 |   3 |
-| Y0 |  60 |  63 |
+| Y1 |   6 |  29 |
+| Y0 |  60 |  87 |
 +----+-----+-----+
 
 
@@ -188,8 +188,8 @@ All Modules
 +----+----+-----+
 |    | X0 | X1  |
 +----+----+-----+
-| Y1 |  0 |  14 |
-| Y0 |  0 |  21 |
+| Y1 |  0 |   0 |
+| Y0 |  0 |  35 |
 +----+----+-----+
 
 
@@ -210,8 +210,8 @@ All Modules
 +----+----+-----+
 |    | X0 | X1  |
 +----+----+-----+
-| Y1 |  0 |  33 |
-| Y0 |  1 |   0 |
+| Y1 |  0 |   0 |
+| Y0 |  1 |  33 |
 +----+----+-----+
 
 
@@ -236,10 +236,11 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          63 |               0 | 63 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG                                                    |
+| g0        | n/a   | BUFG/O          | None       |          87 |               0 | 87 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG                                                    |
 | g1        | n/a   | BUFG/O          | None       |          34 |               0 | 34 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
 | g2        | n/a   | BUFG/O          | None       |           0 |               1 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
-| g3        | n/a   | BUFG/O          | None       |          20 |               1 | 20 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
+| g3        | n/a   | BUFG/O          | None       |          34 |               1 | 34 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
+| g4        | n/a   | BUFG/O          | None       |          33 |               0 | 33 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -265,10 +266,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |           3 |               0 |  3 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG                                                    |
+| g0        | n/a   | BUFG/O          | None       |          29 |               0 | 29 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG                                                    |
 | g2        | n/a   | BUFG/O          | None       |          34 |               0 | 34 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
-| g3        | n/a   | BUFG/O          | None       |          14 |               0 | 14 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG |
-| g4        | n/a   | BUFG/O          | None       |          33 |               0 | 33 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -299,7 +298,7 @@ resize_pblock [get_pblocks {CLKAG_clk_IBUF_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKRE
 #startgroup
 create_pblock {CLKAG_Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_Game_v1_imp_i/Debouncer_3/U0/clk_div_inst/clk_out_reg_reg_0_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0_BUFG" driven by instance "Game_v1_imp_i/Debouncer_1/U0/clk_div_inst/clk_out_reg_reg_0_BUFG_inst" located at site "BUFGCTRL_X0Y1"
@@ -320,5 +319,5 @@ resize_pblock [get_pblocks {CLKAG_Game_v1_imp_i/Debouncer_0/U0/clk_div_inst/clk_
 #startgroup
 create_pblock {CLKAG_Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_Game_v1_imp_i/ClockDivider_0/U0/clk_out_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup

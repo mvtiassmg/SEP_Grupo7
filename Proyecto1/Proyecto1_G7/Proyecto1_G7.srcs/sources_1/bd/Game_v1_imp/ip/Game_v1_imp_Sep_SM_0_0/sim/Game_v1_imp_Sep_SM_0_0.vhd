@@ -60,11 +60,12 @@ ENTITY Game_v1_imp_Sep_SM_0_0 IS
     start : IN STD_LOGIC;
     btn_shoot : IN STD_LOGIC;
     magnum_status : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     rgb_r : OUT STD_LOGIC;
     rgb_g : OUT STD_LOGIC;
     rgb_b : OUT STD_LOGIC;
-    shot_out : OUT STD_LOGIC
+    shot_out : OUT STD_LOGIC;
+    instr_ld : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    enable_ld : OUT STD_LOGIC
   );
 END Game_v1_imp_Sep_SM_0_0;
 
@@ -78,11 +79,12 @@ ARCHITECTURE Game_v1_imp_Sep_SM_0_0_arch OF Game_v1_imp_Sep_SM_0_0 IS
       start : IN STD_LOGIC;
       btn_shoot : IN STD_LOGIC;
       magnum_status : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       rgb_r : OUT STD_LOGIC;
       rgb_g : OUT STD_LOGIC;
       rgb_b : OUT STD_LOGIC;
-      shot_out : OUT STD_LOGIC
+      shot_out : OUT STD_LOGIC;
+      instr_ld : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+      enable_ld : OUT STD_LOGIC
     );
   END COMPONENT Sep_SM;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -101,10 +103,11 @@ BEGIN
       start => start,
       btn_shoot => btn_shoot,
       magnum_status => magnum_status,
-      leds => leds,
       rgb_r => rgb_r,
       rgb_g => rgb_g,
       rgb_b => rgb_b,
-      shot_out => shot_out
+      shot_out => shot_out,
+      instr_ld => instr_ld,
+      enable_ld => enable_ld
     );
 END Game_v1_imp_Sep_SM_0_0_arch;

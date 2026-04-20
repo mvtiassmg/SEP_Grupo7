@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/ProyectoSep_LEDS_NOCLONADO/ProyectoSep_LEDS.sim/sim_1/impl/timing/xsim/LEDriverONE_tb_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LEDriverONE
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/SEP/SEP_Grupo7/Proyecto1/Proyecto1_G7/ProyectoSep_LEDS_NOCLONADO/ProyectoSep_LEDS.srcs/sim_1/new/tb_LedDriverONE.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'LEDriverONE_tb'

@@ -6,39 +6,22 @@
       "name": "GameModeSel_imp",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.1",
-      "validated": "true"
+      "tool_version": "2020.1"
     },
     "design_tree": {
+      "GameModeSelection_0": "",
       "Debouncer_0": "",
       "Debouncer_1": "",
       "Debouncer_2": "",
-      "ClockDivider_0": "",
-      "GameModeSelection_0": ""
+      "ClockDivider_0": ""
     },
     "ports": {
       "clk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "GameModeSel_imp_clk",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "125000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
           }
         }
       },
@@ -68,152 +51,6 @@
       }
     },
     "components": {
-      "Debouncer_0": {
-        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
-        "xci_name": "GameModeSel_imp_Debouncer_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Debouncer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "GameModeSel_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "btn": {
-            "direction": "I"
-          },
-          "btn_out": {
-            "direction": "O",
-            "parameters": {
-              "POLARITY": {
-                "value": "",
-                "value_src": "weak"
-              }
-            }
-          }
-        }
-      },
-      "Debouncer_1": {
-        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
-        "xci_name": "GameModeSel_imp_Debouncer_0_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Debouncer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "GameModeSel_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "btn": {
-            "direction": "I"
-          },
-          "btn_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "Debouncer_2": {
-        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
-        "xci_name": "GameModeSel_imp_Debouncer_0_2",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Debouncer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "GameModeSel_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "btn": {
-            "direction": "I"
-          },
-          "btn_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "ClockDivider_0": {
-        "vlnv": "xilinx.com:module_ref:ClockDivider:1.0",
-        "xci_name": "GameModeSel_imp_ClockDivider_0_0",
-        "parameters": {
-          "FREQ_DES": {
-            "value": "100"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ClockDivider",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "GameModeSel_imp_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "clk_out": {
-            "direction": "O",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "",
-                "value_src": "weak"
-              },
-              "FREQ_HZ": {
-                "value": "",
-                "value_src": "weak"
-              },
-              "PHASE": {
-                "value": "",
-                "value_src": "weak"
-              }
-            }
-          }
-        }
-      },
       "GameModeSelection_0": {
         "vlnv": "xilinx.com:module_ref:GameModeSelection:1.0",
         "xci_name": "GameModeSel_imp_GameModeSelection_0_0",
@@ -225,13 +62,7 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "reset": {
             "type": "rst",
@@ -269,6 +100,92 @@
             "right": "0"
           },
           "mode_ready": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "GameModeSel_imp_Debouncer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "GameModeSel_imp_Debouncer_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_2": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "GameModeSel_imp_Debouncer_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "btn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "ClockDivider_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider:1.0",
+        "xci_name": "GameModeSel_imp_ClockDivider_0_0",
+        "parameters": {
+          "FREQ_DES": {
+            "value": "100"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clk_out": {
             "direction": "O"
           }
         }

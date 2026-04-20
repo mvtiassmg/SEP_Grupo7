@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Game_v1_imp_Debouncer_0_3_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1775428463">
+<GenRun Id="Game_v1_imp_Debouncer_0_3_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1776430911">
   <File Type="PA-TCL" Name="Game_v1_imp_Debouncer_0_3.tcl"/>
   <File Type="REPORTS-TCL" Name="Game_v1_imp_Debouncer_0_3_reports.tcl"/>
   <File Type="RDS-RDS" Name="Game_v1_imp_Debouncer_0_3.vds"/>
@@ -9,9 +9,11 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Game_v1_imp_Debouncer_0_3">
     <File Path="$PSRCDIR/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -22,9 +24,11 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Game_v1_imp_Debouncer_0_3">
     <File Path="$PSRCDIR/sources_1/bd/Game_v1_imp/ip/Game_v1_imp_Debouncer_0_3/Game_v1_imp_Debouncer_0_3.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>

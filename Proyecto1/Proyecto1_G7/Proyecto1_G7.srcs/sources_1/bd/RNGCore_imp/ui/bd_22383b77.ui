@@ -29,7 +29,7 @@ preplace netloc shot_1 1 0 1 NJ 440
 preplace netloc RNGCore_0_pos_bala 1 2 1 NJ 220
 preplace netloc RNGCore_0_ending 1 2 1 NJ 260
 levelinfo -pg 1 0 120 370 530
-pagesize -pg 1 -db -bbox -sgen -100 0 650 500
+pagesize -pg 1 -db -bbox -sgen -100 0 640 500
 "
 }
 0

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ClockDivider, Debouncer, Debouncer, Debouncer, RNGCore, Sep_SM
+# ClockDivider, Debouncer, Debouncer, Debouncer, LEDriverONE, RNGCore, Sep_SM
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -165,6 +165,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
+  set EnableLed [ create_bd_port -dir I EnableLed ]
   set btnRNG [ create_bd_port -dir I btnRNG ]
   set clk [ create_bd_port -dir I -type clk -freq_hz 125000000 clk ]
   set enable [ create_bd_port -dir I enable ]
@@ -222,6 +223,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: LEDriverONE_0, and set properties
+  set block_name LEDriverONE
+  set block_cell_name LEDriverONE_0
+  if { [catch {set LEDriverONE_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $LEDriverONE_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: RNGCore_0, and set properties
   set block_name RNGCore
   set block_cell_name RNGCore_0
@@ -249,15 +261,17 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Debouncer_0_btn_out [get_bd_pins Debouncer_0/btn_out] [get_bd_pins RNGCore_0/reset] [get_bd_pins Sep_SM_0/reset]
   connect_bd_net -net Debouncer_1_btn_out [get_bd_pins Debouncer_1/btn_out] [get_bd_pins RNGCore_0/btnRNG]
   connect_bd_net -net Debouncer_3_btn_out [get_bd_pins Debouncer_3/btn_out] [get_bd_pins Sep_SM_0/btn_shoot]
+  connect_bd_net -net Enable_led_0_1 [get_bd_ports EnableLed] [get_bd_pins LEDriverONE_0/Enable_led]
+  connect_bd_net -net LEDriverONE_0_leds [get_bd_ports leds] [get_bd_pins LEDriverONE_0/leds]
   connect_bd_net -net RNGCore_0_ending [get_bd_pins RNGCore_0/ending] [get_bd_pins Sep_SM_0/start]
   connect_bd_net -net RNGCore_0_magnum_status [get_bd_pins RNGCore_0/magnum_status] [get_bd_pins Sep_SM_0/magnum_status]
-  connect_bd_net -net Sep_SM_0_leds [get_bd_ports leds] [get_bd_pins Sep_SM_0/leds]
+  connect_bd_net -net Sep_SM_0_instr_ld [get_bd_pins LEDriverONE_0/instr] [get_bd_pins Sep_SM_0/instr_ld]
   connect_bd_net -net Sep_SM_0_rgb_b [get_bd_ports rgb_b] [get_bd_pins Sep_SM_0/rgb_b]
   connect_bd_net -net Sep_SM_0_rgb_g [get_bd_ports rgb_g] [get_bd_pins Sep_SM_0/rgb_g]
   connect_bd_net -net Sep_SM_0_rgb_r [get_bd_ports rgb_r] [get_bd_pins Sep_SM_0/rgb_r]
   connect_bd_net -net Sep_SM_0_shot_out [get_bd_pins RNGCore_0/shot] [get_bd_pins Sep_SM_0/shot_out]
   connect_bd_net -net btnRNG_1 [get_bd_ports btnRNG] [get_bd_pins Debouncer_1/btn]
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins ClockDivider_0/clk] [get_bd_pins Debouncer_0/clk] [get_bd_pins Debouncer_1/clk] [get_bd_pins Debouncer_3/clk]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins ClockDivider_0/clk] [get_bd_pins Debouncer_0/clk] [get_bd_pins Debouncer_1/clk] [get_bd_pins Debouncer_3/clk] [get_bd_pins LEDriverONE_0/clk]
   connect_bd_net -net enable_1 [get_bd_ports enable] [get_bd_pins RNGCore_0/enable]
   connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins Debouncer_0/btn]
   connect_bd_net -net shoot_1 [get_bd_ports shoot] [get_bd_pins Debouncer_3/btn]

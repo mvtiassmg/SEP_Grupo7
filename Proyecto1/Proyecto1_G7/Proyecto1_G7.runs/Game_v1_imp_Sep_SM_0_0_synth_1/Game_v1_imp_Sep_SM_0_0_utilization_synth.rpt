@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Apr  6 08:56:18 2026
-| Host         : MS061325 running 64-bit major release  (build 9200)
+| Date         : Sat Apr 18 10:55:38 2026
+| Host         : Mazzi running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Game_v1_imp_Sep_SM_0_0_utilization_synth.rpt -pb Game_v1_imp_Sep_SM_0_0_utilization_synth.pb
 | Design       : Game_v1_imp_Sep_SM_0_0
 | Device       : 7z010clg400-1
@@ -147,8 +147,8 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   12 |        Flop & Latch |
-| LUT6     |    8 |                 LUT |
-| LUT5     |    5 |                 LUT |
+| LUT5     |    7 |                 LUT |
+| LUT6     |    6 |                 LUT |
 | LUT2     |    1 |                 LUT |
 +----------+------+---------------------+
 

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1776429828">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1776657434">
   <File Type="PA-TCL" Name="Game_v1_imp_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Game_v1_imp_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Game_v1_imp_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="Game_v1_imp_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="Game_v1_imp_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Game_v1_imp_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Game_v1_imp_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Game_v1_imp_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Game_v1_imp_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Decoder.vhd">
@@ -49,6 +46,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Debouncer.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Ledd.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Ledd.vhd"/>
+        <Attr Name="ImportTime" Val="1776407800"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -131,15 +136,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Ledd.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Ledd.vhd"/>
-        <Attr Name="ImportTime" Val="1776407800"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Game_v1_imp_wrapper"/>
@@ -169,20 +165,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_Debouncer_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_Debouncer_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_ClockDivider_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_Debouncer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_Debouncer_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_ClockDivider_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_Debouncer_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="RNGCore_imp_RNGCore_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_Debouncer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_RNGCore_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_ClockDivider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_Debouncer_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="GameModeSel_imp_GameModeSelection_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_RNGCore_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_Debouncer_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_Debouncer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_ClockDivider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_Sep_SM_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Game_v1_imp_LEDriverONE_0_0"/>
 </GenRun>

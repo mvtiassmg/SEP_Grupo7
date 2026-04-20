@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Apr  6 08:56:18 2026
-// Host        : MS061325 running 64-bit major release  (build 9200)
+// Date        : Sat Apr 18 10:55:38 2026
+// Host        : Mazzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Game_v1_imp_Sep_SM_0_0_sim_netlist.v
 // Design      : Game_v1_imp_Sep_SM_0_0
@@ -21,25 +21,28 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     start,
     btn_shoot,
     magnum_status,
-    leds,
     rgb_r,
     rgb_g,
     rgb_b,
-    shot_out);
+    shot_out,
+    instr_ld,
+    enable_ld);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0" *) input clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
   input start;
   input btn_shoot;
   input [7:0]magnum_status;
-  output [3:0]leds;
   output rgb_r;
   output rgb_g;
   output rgb_b;
   output shot_out;
+  output [2:0]instr_ld;
+  output enable_ld;
 
+  wire \<const1> ;
   wire btn_shoot;
   wire clk;
-  wire [3:0]\^leds ;
+  wire [2:0]instr_ld;
   wire [7:0]magnum_status;
   wire reset;
   wire rgb_b;
@@ -48,13 +51,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire shot_out;
   wire start;
 
-  assign leds[3:2] = \^leds [3:2];
-  assign leds[1] = \^leds [0];
-  assign leds[0] = \^leds [0];
+  assign enable_ld = \<const1> ;
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM U0
        (.btn_shoot(btn_shoot),
         .clk(clk),
-        .leds({\^leds [3:2],\^leds [0]}),
+        .instr_ld(instr_ld),
         .magnum_status(magnum_status[0]),
         .reset(reset),
         .rgb_b(rgb_b),
@@ -62,10 +63,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .rgb_r(rgb_r),
         .shot_out(shot_out),
         .start(start));
+  VCC VCC
+       (.P(\<const1> ));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
-   (leds,
+   (instr_ld,
     shot_out,
     rgb_g,
     rgb_b,
@@ -75,7 +78,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
     reset,
     magnum_status,
     clk);
-  output [2:0]leds;
+  output [2:0]instr_ld;
   output shot_out;
   output rgb_g;
   output rgb_b;
@@ -94,10 +97,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
   wire btn_prev_i_1_n_0;
   wire btn_shoot;
   wire clk;
-  wire [2:0]leds;
-  wire \leds[1]_i_1_n_0 ;
-  wire \leds[2]_i_1_n_0 ;
-  wire \leds[3]_i_1_n_0 ;
+  wire [2:0]instr_ld;
+  wire \instr_ld[0]_i_1_n_0 ;
+  wire \instr_ld[1]_i_1_n_0 ;
+  wire \instr_ld[2]_i_1_n_0 ;
   wire [0:0]magnum_status;
   wire reset;
   wire rgb_b;
@@ -115,36 +118,35 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
   wire turno_j1_reg_n_0;
 
   LUT6 #(
-    .INIT(64'h0000000026266626)) 
+    .INIT(64'h0000000066666626)) 
     \FSM_sequential_state[0]_i_1 
        (.I0(state[0]),
         .I1(\__0/i__n_0 ),
-        .I2(state[1]),
-        .I3(magnum_status),
-        .I4(state[2]),
+        .I2(state[2]),
+        .I3(state[1]),
+        .I4(magnum_status),
         .I5(reset),
         .O(\FSM_sequential_state[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000022226A62)) 
+    .INIT(64'h00000000226626AA)) 
     \FSM_sequential_state[1]_i_1 
        (.I0(state[1]),
         .I1(\__0/i__n_0 ),
-        .I2(state[0]),
-        .I3(magnum_status),
-        .I4(state[2]),
+        .I2(magnum_status),
+        .I3(state[2]),
+        .I4(state[0]),
         .I5(reset),
         .O(\FSM_sequential_state[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000022222622)) 
+  LUT5 #(
+    .INIT(32'h0000622A)) 
     \FSM_sequential_state[2]_i_1 
        (.I0(state[2]),
         .I1(\__0/i__n_0 ),
-        .I2(magnum_status),
-        .I3(state[1]),
-        .I4(state[0]),
-        .I5(reset),
+        .I2(state[1]),
+        .I3(state[0]),
+        .I4(reset),
         .O(\FSM_sequential_state[2]_i_1_n_0 ));
-  (* FSM_ENCODED_STATES = "idle:000,jugando:001,evaluar:010,seguro:100,muerte:011" *) 
+  (* FSM_ENCODED_STATES = "idle:000,jugando:001,ledcero:010,preevaluar:011,evaluar:100,seguro:110,muerte:101" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[0] 
@@ -153,7 +155,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .D(\FSM_sequential_state[0]_i_1_n_0 ),
         .Q(state[0]),
         .R(1'b0));
-  (* FSM_ENCODED_STATES = "idle:000,jugando:001,evaluar:010,seguro:100,muerte:011" *) 
+  (* FSM_ENCODED_STATES = "idle:000,jugando:001,ledcero:010,preevaluar:011,evaluar:100,seguro:110,muerte:101" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[1] 
@@ -162,7 +164,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .D(\FSM_sequential_state[1]_i_1_n_0 ),
         .Q(state[1]),
         .R(1'b0));
-  (* FSM_ENCODED_STATES = "idle:000,jugando:001,evaluar:010,seguro:100,muerte:011" *) 
+  (* FSM_ENCODED_STATES = "idle:000,jugando:001,ledcero:010,preevaluar:011,evaluar:100,seguro:110,muerte:101" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[2] 
@@ -172,13 +174,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .Q(state[2]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h4054405E4554405E)) 
+    .INIT(64'h00C077FC22E277FC)) 
     \__0/i_ 
-       (.I0(state[2]),
-        .I1(start),
-        .I2(state[1]),
-        .I3(state[0]),
-        .I4(btn_shoot),
+       (.I0(btn_shoot),
+        .I1(state[2]),
+        .I2(start),
+        .I3(state[1]),
+        .I4(state[0]),
         .I5(btn_prev),
         .O(\__0/i__n_0 ));
   LUT2 #(
@@ -195,60 +197,60 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .D(btn_prev_i_1_n_0),
         .Q(btn_prev),
         .R(1'b0));
+  LUT6 #(
+    .INIT(64'hFFFFF09300003093)) 
+    \instr_ld[0]_i_1 
+       (.I0(turno_j1_reg_n_0),
+        .I1(state[2]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(reset),
+        .I5(instr_ld[0]),
+        .O(\instr_ld[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFC07300000073)) 
+    \instr_ld[1]_i_1 
+       (.I0(turno_j1_reg_n_0),
+        .I1(state[2]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(reset),
+        .I5(instr_ld[1]),
+        .O(\instr_ld[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFA0008)) 
-    \leds[1]_i_1 
-       (.I0(state[1]),
+    .INIT(32'hFF890009)) 
+    \instr_ld[2]_i_1 
+       (.I0(state[2]),
         .I1(state[0]),
-        .I2(state[2]),
+        .I2(state[1]),
         .I3(reset),
-        .I4(leds[0]),
-        .O(\leds[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF9F00000093)) 
-    \leds[2]_i_1 
-       (.I0(turno_j1_reg_n_0),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(state[2]),
-        .I4(reset),
-        .I5(leds[1]),
-        .O(\leds[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF6F00000063)) 
-    \leds[3]_i_1 
-       (.I0(turno_j1_reg_n_0),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(state[2]),
-        .I4(reset),
-        .I5(leds[2]),
-        .O(\leds[3]_i_1_n_0 ));
-  FDRE \leds_reg[1] 
+        .I4(instr_ld[2]),
+        .O(\instr_ld[2]_i_1_n_0 ));
+  FDRE \instr_ld_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[1]_i_1_n_0 ),
-        .Q(leds[0]),
+        .D(\instr_ld[0]_i_1_n_0 ),
+        .Q(instr_ld[0]),
         .R(1'b0));
-  FDRE \leds_reg[2] 
+  FDRE \instr_ld_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[2]_i_1_n_0 ),
-        .Q(leds[1]),
+        .D(\instr_ld[1]_i_1_n_0 ),
+        .Q(instr_ld[1]),
         .R(1'b0));
-  FDRE \leds_reg[3] 
+  FDRE \instr_ld_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[3]_i_1_n_0 ),
-        .Q(leds[2]),
+        .D(\instr_ld[2]_i_1_n_0 ),
+        .Q(instr_ld[2]),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hFFAF0101)) 
+    .INIT(32'hFAFF0041)) 
     rgb_b_i_1
        (.I0(reset),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(state[2]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(state[0]),
         .I4(rgb_b),
         .O(rgb_b_i_1_n_0));
   FDRE rgb_b_reg
@@ -258,12 +260,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .Q(rgb_b),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hFEBF0011)) 
+    .INIT(32'hFBBF0101)) 
     rgb_g_i_1
        (.I0(reset),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(state[2]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(state[0]),
         .I4(rgb_g),
         .O(rgb_g_i_1_n_0));
   FDRE rgb_g_reg
@@ -273,12 +275,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .Q(rgb_g),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hFEEF0041)) 
+    .INIT(32'hFEBF0401)) 
     rgb_r_i_1
        (.I0(reset),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(state[2]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(state[0]),
         .I4(rgb_r),
         .O(rgb_r_i_1_n_0));
   FDRE rgb_r_reg
@@ -288,10 +290,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .Q(rgb_r),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hFFB80010)) 
+    .INIT(32'hFFB40004)) 
     shot_out_i_1
-       (.I0(state[2]),
-        .I1(state[0]),
+       (.I0(state[0]),
+        .I1(state[2]),
         .I2(state[1]),
         .I3(reset),
         .I4(shot_out),
@@ -302,22 +304,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Sep_SM
         .D(shot_out_i_1_n_0),
         .Q(shot_out),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h4444FFFF444F0000)) 
+  LUT5 #(
+    .INIT(32'h30FF7500)) 
     turno_j1_i_1
-       (.I0(state[2]),
-        .I1(start),
-        .I2(state[1]),
-        .I3(state[0]),
-        .I4(turno_j1_i_2_n_0),
-        .I5(turno_j1_reg_n_0),
+       (.I0(state[0]),
+        .I1(state[1]),
+        .I2(start),
+        .I3(turno_j1_i_2_n_0),
+        .I4(turno_j1_reg_n_0),
         .O(turno_j1_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0000000030040004)) 
+    .INIT(64'h0000000050200020)) 
     turno_j1_i_2
-       (.I0(btn_shoot),
-        .I1(state[2]),
-        .I2(state[1]),
+       (.I0(state[1]),
+        .I1(btn_shoot),
+        .I2(state[2]),
         .I3(state[0]),
         .I4(start),
         .I5(reset),
